@@ -22,3 +22,4 @@ console.log(asmensKodas, typeof asmensKodas);
 amzius = 31;
 console.log(amzius);
 
+console.log('labas')
