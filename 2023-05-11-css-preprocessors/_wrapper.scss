@@ -1,0 +1,110 @@
+@use 'variables';
+@use 'responsive';
+
+$screen-sm: 330px;
+$screen-md: 500px;
+
+
+.wrapper {
+  padding: variables.$spacing-3;
+
+  // @media screen and (min-width: $screen-sm) {
+  //   padding: 10px;
+  // }
+
+  @include responsive.screen-sm {
+    padding: 10px;
+  }
+
+  // @media screen and (min-width: $screen-md) {
+  //   padding: 50px;
+  // }
+
+  @include responsive.screen-md {
+    padding: 50px;
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.half-width {
+    width: 50%;
+  }
+
+  &.bg-dark {
+    background-color: rgb(40, 40, 40);
+  }
+
+  h2 {
+    font-size: 15px;
+
+    @include responsive.screen-sm {
+      font-size: 30px;
+    }
+
+    @include responsive.screen-md {
+      font-size: 40px;
+    }
+
+    &.color-red {
+      color: variables.$color-red;
+      cursor: pointer;
+      transition: color 0.3s ease-in;
+
+      // @media screen and (min-width: $screen-sm) {
+      //   color: blue;
+      // }
+    
+      // @media screen and (min-width: $screen-md) {
+      //   color: green;
+      // }
+
+      @include responsive.screen-sm {
+        color: blue;
+      }
+
+      @include responsive.screen-md {
+        color: green;
+      }
+
+      &:hover {
+        color: variables.$color-green;
+      }
+    }
+  }
+
+  // p::before {
+  //   content: '- ';
+  //   color: variables.$color-red;
+  // }
+
+  // p {
+  //   &::before {
+  //     content: '- ';
+  //     color: variables.$color-red;
+  //   }
+
+  //   &.empty {
+  //     &::before {
+  //       content: none;
+  //     }
+  //   }
+  // }
+
+  p {
+    &:not(.empty) {
+      &::before {
+        content: '- ';
+        color: variables.$color-red;
+      }
+    }
+
+    &:first-of-type {
+      font-size: 1.5em;
+    }
+  }
+}
+
+
+

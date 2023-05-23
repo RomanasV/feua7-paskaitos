@@ -1,0 +1,284 @@
+:root {
+  --color-primary: rgb(25, 168, 144);
+  --color-secondary: rgb(133, 12, 166);
+}
+
+body {
+  /* background-color: rgb(238, 238, 238); */
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  background-color: green;
+  color: white;
+  border: 10px dotted rgb(128, 0, 28);
+  padding: 20px;
+}
+
+.post {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 10px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  max-width: 600px;
+  min-width: 250px;
+
+  /* transition-property: box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out; */
+
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.post:hover {
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, .1);
+}
+
+.post h2 {
+  margin-top: 0;
+  transition-property: color;
+  transition-duration: 1s;
+}
+
+.post:hover h2 {
+  color: var(--color-primary);
+}
+
+p::before {
+  content: '→';
+  color: green;
+  font-size: 30px;
+  background-color: var(--color-secondary);
+  margin-right: 15px;
+}
+
+p::after {
+  content: '[...]';
+  margin-left: 10px;
+  color: green;
+}
+
+/* Pirmas būdas */
+
+/* button {
+  background-color: purple;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  border: 2px solid purple;
+  
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: transparent;
+  color: purple;
+}
+
+a.button {
+  background-color: purple;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  border: 2px solid purple;
+
+  text-decoration: none;
+  font-family: 'Arial';
+  display: inline-block;
+  text-align: center;
+}
+
+a.button:hover {
+  background-color: transparent;
+  color: purple;
+} */
+
+
+/* Antras būdas */
+
+/* .button-fill {
+  background-color: purple;
+  color: white;
+
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  border: 2px solid purple;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Arial';
+  display: inline-block;
+  text-align: center;
+}
+
+.button-fill:hover {
+  background-color: transparent;
+  color: purple;
+}
+
+
+.button-outline {
+  background-color: transparent;
+  color: purple;
+
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  border: 2px solid purple;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Arial';
+  display: inline-block;
+  text-align: center;
+}
+
+.button-outline:hover {
+  background-color: purple;
+  color: white;
+} */
+
+
+/* Trečias būdas */
+
+/* .button {
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  border: 2px solid purple;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Arial';
+  display: inline-block;
+  text-align: center;
+}
+
+.button-fill {
+  background-color: purple;
+  color: white;
+}
+
+.button-fill:hover {
+  background-color: transparent;
+  color: purple;
+}
+
+.button-outline {
+  background-color: transparent;
+  color: purple;
+}
+
+.button-outline:hover {
+  background-color: purple;
+  color: white;
+} */
+
+
+/* Ketvirtas būdas */
+
+.button {
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Arial';
+  display: inline-block;
+  text-align: center;
+
+  /* transition-property: background-color, color;
+  transition-duration: 0.5s, 0.3s;
+  transition-timing-function: ease-in, ease-in-out; */
+
+  transition: background-color 0.5s ease-in, color 0.3s ease-in-out;
+}
+
+.button-rect {
+  border-radius: 0;
+}
+
+.button-large {
+  font-size: 20px;
+}
+
+.button-small {
+  font-size: 12px;
+}
+
+.button-primary {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.button-secondary {
+  border-color: var(--color-secondary);
+  background-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.button-success {
+  border-color: green;
+  background-color: green;
+  color: green;
+}
+
+.button-outline:hover,
+.button-fill {
+  color: white;
+}
+
+.button-fill:hover,
+.button-outline {
+  background-color: transparent;
+}
+
+.button-fill.button-primary:hover {
+  color: var(--color-primary);
+}
+
+.button-fill.button-secondary:hover {
+  color: var(--color-secondary);
+}
+
+.button-fill.button-success:hover {
+  color: green;
+}
+
+.button-outline.button-primary:hover {
+  background-color: var(--color-primary);
+}
+
+.button-outline.button-secondary:hover {
+  background-color: var(--color-secondary);
+}
+
+.button-outline.button-success:hover {
+  background-color: green;
+}

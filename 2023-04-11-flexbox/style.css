@@ -1,0 +1,29 @@
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.container {
+  background-color: lightgray;
+  height: 500px;
+  width: 500px;
+
+  display: flex;
+  /* flex-wrap: wrap; */
+  
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.child {
+  width: 100px;
+  height: 100px;
+}

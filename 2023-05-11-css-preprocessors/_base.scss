@@ -1,0 +1,14 @@
+@use 'variables';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.bg-dark {
+  background-color: variables.$color-black;
+  color: variables.$color-white;
+}

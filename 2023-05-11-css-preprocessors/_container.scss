@@ -1,0 +1,6 @@
+@use 'variables';
+
+.container {
+  width: 70%;
+  margin: variables.$spacing-3 auto;
+}

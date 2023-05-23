@@ -1,0 +1,49 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.image-wrapper img {
+  width: 100%;
+}
+
+.hero-section {
+  background-color: blueviolet;
+  padding: 50px 0;
+}
+
+.hero-section .hero-content-wrapper {
+  display: flex;
+  column-gap: 50px;
+  align-items: center;
+}
+
+.hero-section .hero-content-wrapper .hero-content {
+  width: 55%;
+}
+
+.hero-section .hero-content-wrapper .image-wrapper {
+  width: 45%;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contacts p::before {
+  content: 'labas';
+}

@@ -1,0 +1,25 @@
+.container {
+  height: 500px;
+  width: 500px;
+  background-color: lightgrey;
+
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 20% 80%;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.orange {
+  background-color: orange;
+}

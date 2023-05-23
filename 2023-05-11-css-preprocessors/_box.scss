@@ -1,0 +1,7 @@
+@use 'variables';
+
+.box {
+  border: 2px solid variables.$color-green;
+  padding: variables.$spacing-3;
+  margin-bottom: variables.$spacing-3;
+}

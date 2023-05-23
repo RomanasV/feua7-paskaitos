@@ -1,0 +1,40 @@
+@use 'base';
+@use 'container';
+@use 'variables';
+@use 'wrapper';
+@use 'box';
+@use 'responsive';
+
+
+.responsive-container {
+  background-color: green;
+  color: white;
+
+  // @media (min-width: 300px) {
+  //   background-color: purple;
+  // }
+
+  @include responsive.screen-sm {
+    background-color: purple;
+  }
+
+  // @media (min-width: 500px) {
+  //   background-color: red;
+  // }
+
+  @include responsive.screen-md {
+    background-color: red;
+  }
+  
+  // @media (min-width: 800px) {
+  //   background-color: rgb(12, 125, 135);
+  // }
+
+  @include responsive.screen-lg {
+    background-color: rgb(12, 125, 135);
+  }
+}
+
+
+
+

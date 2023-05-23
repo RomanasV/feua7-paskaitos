@@ -1,0 +1,40 @@
+h3 {
+  background-color: green;
+  color: white;
+  font-size: 40px;
+}
+
+span {
+  color: red;
+}
+
+h1 {
+  background-color: rgb(155, 109, 198);
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+ol li {
+  color: green;
+}
+
+div h5 {
+  color: red;
+}
+
+.color-red {
+  color: red;
+}
+
+a.color-red {
+  text-transform: uppercase;
+}
+
+ol li.color-red {
+  font-size: 20px;
+}
+
+#headings {
+  background-color: lightgray;
+}

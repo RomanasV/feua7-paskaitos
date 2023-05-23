@@ -1,0 +1,104 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.bg-dark {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  width: 70%;
+  margin: 30px auto;
+}
+
+.wrapper {
+  padding: 30px;
+}
+@media screen and (min-width: 300px) {
+  .wrapper {
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .wrapper {
+    padding: 50px;
+  }
+}
+.wrapper.full-width {
+  width: 100%;
+}
+.wrapper.half-width {
+  width: 50%;
+}
+.wrapper.bg-dark {
+  background-color: rgb(40, 40, 40);
+}
+.wrapper h2 {
+  font-size: 15px;
+}
+@media screen and (min-width: 300px) {
+  .wrapper h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .wrapper h2 {
+    font-size: 40px;
+  }
+}
+.wrapper h2.color-red {
+  color: red;
+  cursor: pointer;
+  transition: color 0.3s ease-in;
+}
+@media screen and (min-width: 300px) {
+  .wrapper h2.color-red {
+    color: blue;
+  }
+}
+@media screen and (min-width: 500px) {
+  .wrapper h2.color-red {
+    color: green;
+  }
+}
+.wrapper h2.color-red:hover {
+  color: rgb(58, 120, 58);
+}
+.wrapper p:not(.empty)::before {
+  content: "- ";
+  color: red;
+}
+.wrapper p:first-of-type {
+  font-size: 1.5em;
+}
+
+.box {
+  border: 2px solid rgb(58, 120, 58);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.responsive-container {
+  background-color: green;
+  color: white;
+}
+@media screen and (min-width: 300px) {
+  .responsive-container {
+    background-color: purple;
+  }
+}
+@media screen and (min-width: 500px) {
+  .responsive-container {
+    background-color: red;
+  }
+}
+@media screen and (min-width: 800px) {
+  .responsive-container {
+    background-color: rgb(12, 125, 135);
+  }
+}/*# sourceMappingURL=style.css.map */
