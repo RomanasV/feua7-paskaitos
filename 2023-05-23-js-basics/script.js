@@ -32,3 +32,64 @@ console.log(vardas + ' ' + pavarde + ' (amžius ' + amzius + ' m.), asmens kodas
 console.log(vardas + " " + pavarde + " (amžius " + amzius + " m.), asmens kodas: " + asmensKodas + ", gyvenamasis miestas: " + miestas + ".");
 
 console.log(`${vardas} ${pavarde} (amžius ${amzius} m.), asmens kodas: ${asmensKodas}, gyvenamasis miestas: ${miestas}.`);
+
+// John said: "Good morning".
+console.log('John said: "Good morning".');
+console.log(`John said: "Good morning".`);
+
+// That's my car.
+console.log("That's my car.");
+console.log(`That's my car.`);
+
+// John said: "That's my car".
+console.log(`John said: "That's my car".`);
+
+// John `said`: "That's my car".
+console.log("John `said`: " + `"That's my car".`);
+console.log('John `said`: "That\'s my car".');
+console.log("John `said`: \"That's my car\".");
+console.log(`John \`said\`: "That's my car".`);
+
+// John `said`: "That's \my\ car".
+console.log("John `said`: " + `"That's \\my\\ car".`);
+
+// John \`said\`: "That's my car".
+console.log('John \\`said\\`: "That\'s my car".');
+console.log("John \\`said\\`: \"That's my car\".");
+console.log(`John \\\`said\\\`: "That's my car".`);
+
+// Matematiniai operatoriai
+let num1 = 22;
+let num2 = 10;
+let num3 = '10';
+
+console.log(num1 + num2);
+console.log(num1 - num2);
+console.log(num1 * num2);
+console.log(num1 / num2);
+console.log(num1 % num2);
+
+console.log(num1 + num2 * num2);
+// console.log(22 + 10 * 10);
+// console.log(22 + 100);
+// console.log(122);
+console.log((num1 + num2) * num2);
+// console.log((22 + 10) * 10);
+// console.log((32) * 10);
+// console.log(320);
+
+console.log(num1 + num3);
+console.log(num1 - num3);
+console.log(num1 * num3);
+console.log(num1 / num3);
+console.log(num1 % num3);
+
+console.log(num1 + num3 * num3);
+// console.log(22 + '10' * '10');
+// console.log(22 + 100);
+// console.log(122);
+
+console.log((num1 + num3) * num3);
+// console.log((22 + '10') * '10');
+// console.log(('2210') * '10');
+// console.log(22100);
