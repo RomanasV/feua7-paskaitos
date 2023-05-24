@@ -93,3 +93,81 @@ console.log((num1 + num3) * num3);
 // console.log((22 + '10') * '10');
 // console.log(('2210') * '10');
 // console.log(22100);
+
+// SĄLYGOS
+// Dviguba lygybė (loosely equal ==): tikrina TIK reikšmes ir nekreipia dėmesio į duomenų tipą.
+console.log(10 == 10); // true
+console.log('desimt' == 'desimt'); // true
+console.log('10' == '10'); // true
+console.log(10 == '10'); // true
+
+// Triguba lygybė (strictly qual ===): pirmiausiai tikrina ar sutampa duomenų tipai, o tada tikrina reikšmes.
+console.log(10 === 10); // true
+console.log('desimt' === 'desimt'); // true
+console.log('10' === '10'); // true
+console.log(10 === '10'); // false
+
+console.log(10 > 10); // false
+console.log(10 < 10); // false
+console.log(10 >= 10); // true
+console.log(10 <= 10); // true
+
+console.log(10 == 10); // true
+console.log(10 != 10); // false
+
+console.log(10 === 10); // true
+console.log(10 !== 10); // false
+console.log(10 !== '10'); // true
+
+console.log(true); // true
+console.log(!true); // false
+console.log(!false); // true
+console.log(!!true); // true
+
+// IF, ELSE IF, ELSE
+let light = 'yellow';
+
+// console.log(light === 'green');
+// console.log('green' === 'green');
+// console.log(true);
+
+// console.log(light === 'green');
+// console.log('red' === 'green');
+// console.log(false);
+
+if (light === 'green') {
+  console.log('Galima eiti');
+} else if (light === 'yellow') {
+  console.log('Pasiruošk');
+} else if (light === 'red') {
+  console.log('STOP!');
+} else {
+  console.log('Sugedo :(');
+}
+
+
+let personAge = 17.5;
+
+if (personAge >= 18) {
+  console.log('Pirkti bilieta galima');
+} else {
+  console.log('Pirkti bilieto negalima');
+}
+
+if (personAge < 18) {
+  console.log('Pirkti bilieto negalima');
+} else {
+  console.log('Pirkti bilieta galima');
+}
+
+if (personAge > 17) {
+  console.log('Pirkti bilieta galima');
+} else {
+  console.log('Pirkti bilieto negalima');
+}
+
+if (personAge <= 17) {
+  console.log('Pirkti bilieto negalima');
+} else {
+  console.log('Pirkti bilieta galima');
+}
