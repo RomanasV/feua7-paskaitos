@@ -251,8 +251,8 @@ if (personAge < 0) {
 }
 
 
-let password = 'supersdfsdfslaps';
-console.log(password.length);
+// let password = 'supersdfsdfslaps';
+// console.log(password.length);
 
 // SLAPTAŽODIS
 
@@ -260,3 +260,5 @@ console.log(password.length);
 // 2. Jeigu slaptažodis yra ilgesnis už 15 simbolių, tai:
 // 2.1. Patikrinti ar jis yra ilgesnis už 20 simbolių. Jeigu ilgesnis, tai parašyti: „Slaptažodis tinkamas".
 // 2.2. Jeigu jis nėra ilgesnis už 20 simbolių, tai parašyti jog: „Slaptažodis yra tinkamas. Tačiau rekomenduojama jog jis būtų bent 21 simbolio ilgumo."
+
+let password   = '                lscszczczasdasdasdasdasdasdsadsdfsdfsdfsdfsdfsdfsczczczc'
