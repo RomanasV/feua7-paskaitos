@@ -232,10 +232,31 @@ if (personAge >= 0 && personAge < 16) {
   console.log('Pirkti bilieta galima');
 }
 
-if (personAge < 16) {
+// Mažiau už 0
+// Mažiau už 16
+// Mažiau už 18
+// Mažiau už 110
+// Viskas kas liko (daugiau už 110)
+
+if (personAge < 0) {
+  console.log('Amžius privalo būti teigiamas skaičius');
+} else if (personAge < 16) {
   console.log('Pirkti bilieto negalima');
 } else if (personAge < 18) {
   console.log('Pirkti bilietą galima su tėvų sutikimu');
-} else {
+} else if (personAge < 110) {
   console.log('Pirkti bilieta galima');
+} else {
+  console.log('Įvestas amžius yra per didelis');
 }
+
+
+let password = 'supersdfsdfslaps';
+console.log(password.length);
+
+// SLAPTAŽODIS
+
+// 1. Jeigu slaptažodis yra trumpesnis už 16 simbolių, tai parašyti jog „Slaptažodis yra per trumpas. Jis privalo būti bent 16 simbolių ilgumo."
+// 2. Jeigu slaptažodis yra ilgesnis už 15 simbolių, tai:
+// 2.1. Patikrinti ar jis yra ilgesnis už 20 simbolių. Jeigu ilgesnis, tai parašyti: „Slaptažodis tinkamas".
+// 2.2. Jeigu jis nėra ilgesnis už 20 simbolių, tai parašyti jog: „Slaptažodis yra tinkamas. Tačiau rekomenduojama jog jis būtų bent 21 simbolio ilgumo."
