@@ -125,7 +125,8 @@ console.log(!false); // true
 console.log(!!true); // true
 
 // IF, ELSE IF, ELSE
-let light = 'yellow';
+let originalLight = 'GrEeN';
+let light = originalLight.toLowerCase();
 
 // console.log(light === 'green');
 // console.log('green' === 'green');
@@ -135,8 +136,32 @@ let light = 'yellow';
 // console.log('red' === 'green');
 // console.log(false);
 
-if (light === 'green') {
-  console.log('Galima eiti');
+// console.log(light === 'green' || light === 'Green' || light === 'GREEN');
+// console.log('green' === 'green' || 'green' === 'Green' || 'green' === 'GREEN');
+// console.log(true || 'green' === 'Green' || 'green' === 'GREEN');
+// console.log(true);
+
+// console.log('Green' === 'green' || 'Green' === 'Green' || 'Green' === 'GREEN');
+// console.log(false || 'Green' === 'Green' || 'Green' === 'GREEN');
+// console.log(false || true || 'Green' === 'GREEN');
+// console.log(true);
+
+// console.log('GREEN' === 'green' || 'GREEN' === 'Green' || 'GREEN' === 'GREEN');
+// console.log(false || 'GREEN' === 'Green' || 'GREEN' === 'GREEN');
+// console.log(false || false || 'GREEN' === 'GREEN');
+// console.log(false || false || true);
+// console.log(true);
+
+// console.log('blue' === 'green' || 'blue' === 'Green' || 'blue' === 'GREEN');
+// console.log(false || 'blue' === 'Green' || 'blue' === 'GREEN');
+// console.log(false || false || 'blue' === 'GREEN');
+// console.log(false || false || false);
+// console.log(false);
+
+// OR (||) - operator - ar operatorius
+
+if (light === 'green' || light === 'Green' || light === 'GREEN') {
+  console.log('Galima eiti!');
 } else if (light === 'yellow') {
   console.log('Pasiruošk');
 } else if (light === 'red') {
@@ -146,7 +171,7 @@ if (light === 'green') {
 }
 
 
-let personAge = 17.5;
+let personAge = 18;
 
 if (personAge >= 18) {
   console.log('Pirkti bilieta galima');
@@ -168,6 +193,49 @@ if (personAge > 17) {
 
 if (personAge <= 17) {
   console.log('Pirkti bilieto negalima');
+} else {
+  console.log('Pirkti bilieta galima');
+}
+
+// AND (&&) operator = ir operatorius
+
+// console.log(personAge >= 0 && personAge < 18);
+// console.log(18 >= 0 && 18 < 18);
+// console.log(true && false);
+// console.log(false);
+
+// console.log(15 >= 0 && 15 < 18);
+// console.log(true && true);
+// console.log(true);
+
+// console.log(-5 < 18 && -5 >= 0);
+// console.log(true && false);
+// console.log(false);
+
+// console.log(-5 >= 0 && -5 < 18);
+// console.log(false && -5 < 18);
+// console.log(false);
+
+if (personAge >= 0 && personAge < 18) {
+  console.log('Pirkti bilieto negalima');
+} else {
+  console.log('Pirkti bilieta galima');
+}
+
+personAge = 20;
+
+if (personAge >= 0 && personAge < 16) {
+  console.log('Pirkti bilieto negalima');
+} else if (personAge >= 16 && personAge < 18) {
+  console.log('Pirkti bilietą galima su tėvų sutikimu');
+} else {
+  console.log('Pirkti bilieta galima');
+}
+
+if (personAge < 16) {
+  console.log('Pirkti bilieto negalima');
+} else if (personAge < 18) {
+  console.log('Pirkti bilietą galima su tėvų sutikimu');
 } else {
   console.log('Pirkti bilieta galima');
 }
