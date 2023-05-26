@@ -261,4 +261,33 @@ if (personAge < 0) {
 // 2.1. Patikrinti ar jis yra ilgesnis už 20 simbolių. Jeigu ilgesnis, tai parašyti: „Slaptažodis tinkamas".
 // 2.2. Jeigu jis nėra ilgesnis už 20 simbolių, tai parašyti jog: „Slaptažodis yra tinkamas. Tačiau rekomenduojama jog jis būtų bent 21 simbolio ilgumo."
 
-let password   = '                lscszczczasdasdasdasdasdasdsadsdfsdfsdfsdfsdfsdfsczczczc'
+let originalPassword = 'aasdads#afdsdfsdfsdfsdfds';
+let password = originalPassword.trim();
+let passwordLength = password.length;
+
+console.log(password);
+
+if (!password.includes('#')) {
+  console.log('Grodažymės yra privalomos');
+} else if (passwordLength < 16) {
+  console.log('Slaptažodis yra per trumpas. Jis privalo būti bent 16 simbolių ilgumo.');
+} else {
+
+  if (passwordLength >= 21) {
+    console.log('Slaptažodis tinkamas');
+  } else {
+    console.log('Slaptažodis yra tinkamas. Tačiau rekomenduojama jog jis būtų bent 21 simbolio ilgumo.');
+  }
+  
+}
+
+if (!password.includes('#')) {
+  console.log('Grodažymės yra privalomos');
+} else if (passwordLength < 16) {
+  console.log('Slaptažodis yra per trumpas. Jis privalo būti bent 16 simbolių ilgumo.');
+} else if (passwordLength < 21) {
+  console.log('Slaptažodis yra tinkamas. Tačiau rekomenduojama jog jis būtų bent 21 simbolio ilgumo.');
+} else {
+  console.log('Slaptažodis tinkamas');
+}
+  
