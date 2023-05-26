@@ -291,3 +291,31 @@ if (!password.includes('#')) {
   console.log('Slaptažodis tinkamas');
 }
   
+
+// Pagal amžiu surašyti į kurią klasė eina mokinys:
+// 1. Iki 6 metų į mokyklą neina.
+// 2. 7-10 metų eina į pradinę klasę.
+// 3. 11-14 metų eina į pagrindinę.
+// 4. 15-18 metų eina į gimnaziją.
+// 5. 19+ mokyklą baigė.
+
+// 6.1. Jeigu amžius yra mažiau nei 0, tai parašyti jog įvestas amžius yra per mažas.
+// 6.2. Jeigu amžius yra daugau nei 120, tai parašyti jog įvestas amžius yra per didelis.
+
+let age = 1;
+
+if (age < 0) {
+  console.log('Įvestas amžius yra per mažas. Turi būti teigiamas skaičius.')
+} else if (age < 7) {
+  console.log('Į mokyklą neina');
+} else if (age < 11) {
+  console.log('Pradinukas');
+} else if (age < 15) {
+  console.log('Pagrindinė');
+} else if (age < 19) {
+  console.log('Gimnazija');
+} else if (age < 120) {
+  console.log('Mokyklą baigė')
+} else {
+  console.log('Įvestas amžius per didelis');
+}
