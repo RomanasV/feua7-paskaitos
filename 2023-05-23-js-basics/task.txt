@@ -19,3 +19,28 @@ Pagal amžiu surašyti į kurią klasė eina mokinys:
 7.2. Jeigu amžius yra 10 metai, tai parašyti: "Tikriausiai mokosi pradinėje, tačiau gali būti ir penktokas."
 7.3. Jeigu amžius yra 14 metai, tai parašyti: "Tikriausiai mokosi pagrindinėje, tačiau gali būti ir devintokas."
 7.3. Jeigu amžius yra 18 metai, tai parašyti: "Tikriausiai mokosi gimnazijoje, tačiau mokyklą gali būti ir baigęs."
+
+
+UŽDUOTIS: sukurti galvosūkį su keletu klausimu
+PIRMAS LYGIS: 
+1. Norint patekti į kitą lygį, reikia atsakyti bent į vieną klausimą iš dviejų:
+2. Jeigu atsakytas tik vienas klausimas, tai papildomai reikia parašyti kuris klausimas buvo neteisingas.
+
+ANTRAS LYGIS:
+1. Norint patekti į kitą lygį, reikia atsakyti į abu klausimus iš dviejų:
+2. Jeigu atsakytas tik vienas klausimas, tai papildomai reikia parašyti kuris atsakymas buvo neteisingas.
+
+TREČIAS LYGIS: 
+1. Trys klausimai ir į kitą lygį pereinama, jeigu atsakomi bent du klausimai.
+2. Jeigu atsakomi du klausimai, turi būti parodoma, kuris klausimas buvo neatsakytas.
+3. Jeigu atsakomi mažiau nei du klausimai, tai turi būti parodoma, kuris klausimas buvo atsakytas.
+
+1 2 3
++ + +
++ + -
++ - +
+- + +
++ - -
+- + -
+- - +
+- - -
