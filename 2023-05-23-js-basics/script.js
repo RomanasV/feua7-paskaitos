@@ -302,18 +302,31 @@ if (!password.includes('#')) {
 // 6.1. Jeigu amžius yra mažiau nei 0, tai parašyti jog įvestas amžius yra per mažas.
 // 6.2. Jeigu amžius yra daugau nei 120, tai parašyti jog įvestas amžius yra per didelis.
 
-let age = 1;
+// 7.1. Jeigu amžius yra 6 metai, tai parašyti: "Į mokyklą tikriausiai neina, tačiau gali būti ir pirmokas."
+// 7.2. Jeigu amžius yra 10 metai, tai parašyti: "Tikriausiai mokosi pradinėje, tačiau gali būti ir penktokas."
+// 7.3. Jeigu amžius yra 14 metai, tai parašyti: "Tikriausiai mokosi pagrindinėje, tačiau gali būti ir devintokas."
+// 7.3. Jeigu amžius yra 18 metai, tai parašyti: "Tikriausiai mokosi gimnazijoje, tačiau mokyklą gali būti ir baigęs."
+
+let age = 7;
 
 if (age < 0) {
-  console.log('Įvestas amžius yra per mažas. Turi būti teigiamas skaičius.')
-} else if (age < 7) {
+  console.log('Įvestas amžius yra per mažas. Turi būti teigiamas skaičius.');
+} else if (age < 6) {
   console.log('Į mokyklą neina');
-} else if (age < 11) {
+} else if (age < 7) {
+  console.log('Į mokyklą tikriausiai neina, tačiau gali būti ir pirmokas.');
+} else if (age < 10) {
   console.log('Pradinukas');
-} else if (age < 15) {
+} else if (age < 11) {
+  console.log('Tikriausiai mokosi pradinėje, tačiau gali būti ir penktokas.');
+} else if (age < 14) {
   console.log('Pagrindinė');
-} else if (age < 19) {
+} else if (age < 15) {
+  console.log('Tikriausiai mokosi pagrindinėje, tačiau gali būti ir devintokas.');
+} else if (age < 18) {
   console.log('Gimnazija');
+} else if (age < 19) {
+  console.log('Tikriausiai mokosi gimnazijoje, tačiau mokyklą gali būti ir baigęs.');
 } else if (age < 120) {
   console.log('Mokyklą baigė')
 } else {
