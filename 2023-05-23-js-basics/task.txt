@@ -44,3 +44,12 @@ TREČIAS LYGIS:
 - + -
 - - +
 - - -
+
+
+Sukurti vertinimo sistemą, kuri skaitinį vertinimą paverčia į žodžius:
+1 - Labai blogai
+2 - Blogai
+3 - Vidutiniškai
+4 - Gerai
+5 - Puikiai
+Vertinimą reikia įvesti per prompt.

@@ -1,3 +1,5 @@
+console.groupCollapsed('JavaScript Basics');
+
 // Kintamojo sukūrimas:
 // 1. Iniciavimo žodelis (var, let arba const)
 // 2. Kintamojo pavadinimas
@@ -333,6 +335,7 @@ if (age < 0) {
   console.log('Įvestas amžius per didelis');
 }
 
+console.groupEnd();
 
 // UŽDUOTIS: sukurti galvosūkį su keletu klausimu
 // PIRMAS LYGIS: 
@@ -344,10 +347,150 @@ let correctAnswer11 = 579;
 // Kaip vadinasi arčiausiai Žemės esanti žvaigždė? sun
 let correctAnswer12 = 'sun';
 
-let playerAnswer11 = 555;
-let playerAnswer12 = 'moon';
+let playerAnswer11 = 464;
+let playerAnswer12 = 'sun';
 
-// Pirmas teisingas, antras teisingas -     Patekai į kitą lygį. Abu atsakymai teisingi.
-// Pirmas teisingas, antras neteisingas -   Patekai į kitą lygį. Tačiau antras atsakymas buvo neteisingas.
-// Pirmas neteisingas, antras teisingas -   Patekai į kitą lygį. Tačiau pirmas atsakymas buvo neteisingas.
-// Pirmas neteisingas, antras neteisingas - Nepatekai į kitą lygį. Abu atsakymai buvo neteisingi :(
+if (correctAnswer11 === playerAnswer11 && correctAnswer12 === playerAnswer12) {
+  console.log('Patekai į kitą lygį. Abu atsakymai teisingi.');
+} else if (correctAnswer11 === playerAnswer11) {
+  console.log('Patekai į kitą lygį. Tačiau antras atsakymas buvo neteisingas.');
+} else if (correctAnswer12 === playerAnswer12) {
+  console.log('Patekai į kitą lygį. Tačiau pirmas atsakymas buvo neteisingas.');
+} else {
+  console.log('Nepatekai į kitą lygį. Abu atsakymai buvo neteisingi :(');
+}
+
+// ANTRAS LYGIS:
+// 1. Norint patekti į kitą lygį, reikia atsakyti į abu klausimus iš dviejų:
+// 2. Jeigu atsakytas tik vienas klausimas, tai papildomai reikia parašyti kuris atsakymas buvo neteisingas.
+
+let correctAnswer21 = 1;
+let correctAnswer22 = 1;
+
+let playerAnswer21 = 1;
+let playerAnswer22 = 0;
+
+if (correctAnswer21 === playerAnswer21 && correctAnswer22 === playerAnswer22) {
+  console.log('Patekai į kitą lygį. Abu atsakymai teisingi.');
+} else if (correctAnswer21 === playerAnswer21) {
+  console.log('Nepatekai į kitą lygį. Tačiau pirmas atsakymas buvo teisingas.');
+} else if (correctAnswer22 === playerAnswer22) {
+  console.log('Nepatekai į kitą lygį. Tačiau antras atsakymas buvo teisingas.');
+} else {
+  console.log('Nepatekai į kitą lygį. Abu atsakymai buvo neteisingi :(');
+}
+
+// TREČIAS LYGIS: 
+// 1. Trys klausimai ir į kitą lygį pereinama, jeigu atsakomi bent du klausimai.
+// 2. Jeigu atsakomi du klausimai, turi būti parodoma, kuris klausimas buvo neatsakytas.
+// 3. Jeigu atsakomi mažiau nei du klausimai, tai turi būti parodoma, kuris klausimas buvo atsakytas.
+
+// let correctAnswer31 = 1;
+// let correctAnswer32 = 1;
+// let correctAnswer33 = 1;
+
+// let playerAnswer31 = 1;
+// let playerAnswer32 = 1;
+// let playerAnswer33 = 1;
+
+// if (correctAnswer31 === playerAnswer31 && correctAnswer32 === playerAnswer32 && correctAnswer33 === playerAnswer33) {
+//   console.log('Patekai į kitą lygį. Visi atsakymai teisingi.');
+// } else if (correctAnswer31 === playerAnswer31 && correctAnswer32 === playerAnswer32) {
+//   console.log('Patekai į kitą lygį. Tačiau trečias atsakymas buvo neteisingas.');
+// } else if (correctAnswer31 === playerAnswer31 && correctAnswer33 === playerAnswer33) {
+//   console.log('Patekai į kitą lygį. Tačiau antras atsakymas buvo neteisingas.');
+// } else if (correctAnswer32 === playerAnswer32 && correctAnswer33 === playerAnswer33) {
+//   console.log('Patekai į kitą lygį. Tačiau pirmas atsakymas buvo neteisingas.');
+// } else if (correctAnswer31 === playerAnswer31) {
+//   console.log('Nepatekai į kitą lygį. Tačiau pirmas atsakymas buvo teisingas.');
+// } else if (correctAnswer32 === playerAnswer32) {
+//   console.log('Nepatekai į kitą lygį. Tačiau antras atsakymas buvo teisingas.');
+// } else if (correctAnswer33 === playerAnswer33) {
+//   console.log('Nepatekai į kitą lygį. Tačiau trečias atsakymas buvo teisingas.');
+// } else {
+//   console.log('Nepatekai į kitą lygį. Visi atsakymai buvo neteisingi.');
+// }
+
+
+// let correctAnswer31 = 1;
+// let correctAnswer32 = 1;
+// let correctAnswer33 = 1;
+
+// let playerAnswer31 = 1;
+// let playerAnswer32 = 1;
+// let playerAnswer33 = 1;
+
+// let output = '';
+
+// if (correctAnswer31 === playerAnswer31 && correctAnswer32 === playerAnswer32 && correctAnswer33 === playerAnswer33) {
+//   output = 'Patekai į kitą lygį. Visi atsakymai teisingi.';
+// } else if (correctAnswer31 === playerAnswer31 && correctAnswer32 === playerAnswer32) {
+//   output = 'Patekai į kitą lygį. Tačiau trečias atsakymas buvo neteisingas.';
+// } else if (correctAnswer31 === playerAnswer31 && correctAnswer33 === playerAnswer33) {
+//   output = 'Patekai į kitą lygį. Tačiau antras atsakymas buvo neteisingas.';
+// } else if (correctAnswer32 === playerAnswer32 && correctAnswer33 === playerAnswer33) {
+//   output = 'Patekai į kitą lygį. Tačiau pirmas atsakymas buvo neteisingas.';
+// } else if (correctAnswer31 === playerAnswer31) {
+//   output = 'Nepatekai į kitą lygį. Tačiau pirmas atsakymas buvo teisingas.';
+// } else if (correctAnswer32 === playerAnswer32) {
+//   output = 'Nepatekai į kitą lygį. Tačiau antras atsakymas buvo teisingas.';
+// } else if (correctAnswer33 === playerAnswer33) {
+//   output = 'Nepatekai į kitą lygį. Tačiau trečias atsakymas buvo teisingas.';
+// } else {
+//   output = 'Nepatekai į kitą lygį. Visi atsakymai buvo neteisingi.';
+// }
+
+// console.log(output);
+
+
+
+let correctAnswer31 = 1;
+let correctAnswer32 = 1;
+let correctAnswer33 = 1;
+
+let playerAnswer31 = 1;
+let playerAnswer32 = 1;
+let playerAnswer33 = 1;
+
+let answer31 = correctAnswer31 === playerAnswer31;
+let answer32 = correctAnswer32 === playerAnswer32;
+let answer33 = correctAnswer33 === playerAnswer33;
+
+let successMessage = 'Patekai į kitą lygį!';
+let failMessage = 'Nepatekai į kitą lygį.';
+
+let output = '';
+
+if (answer31 && answer32 && answer33) {
+  output = successMessage + ' Visi atsakymai teisingi.';
+} else if (answer31 && answer32) {
+  output = successMessage + ' Tačiau trečias atsakymas buvo neteisingas.';
+} else if (answer31 && answer33) {
+  output = successMessage + ' Tačiau antras atsakymas buvo neteisingas.';
+} else if (answer32 && answer33) {
+  output = successMessage + ' Tačiau pirmas atsakymas buvo neteisingas.';
+} else if (answer31) {
+  output = failMessage + ' Tačiau pirmas atsakymas buvo teisingas.';
+} else if (answer32) {
+  output = failMessage + ' Tačiau antras atsakymas buvo teisingas.';
+} else if (answer33) {
+  output = failMessage + ' Tačiau trečias atsakymas buvo teisingas.';
+} else {
+  output = failMessage + ' Visi atsakymai buvo neteisingi.';
+}
+
+console.log(output);
+
+
+// Sukurti vertinimo sistemą, kuri skaitinį vertinimą paverčia į žodžius:
+// 1 - Labai blogai
+// 2 - Blogai
+// 3 - Vidutiniškai
+// 4 - Gerai
+// 5 - Puikiai
+// Vertinimą reikia įvesti per prompt.
+
+// let grade = prompt('Enter your grade:');
+let grade = 1;
+
+console.log(grade);
