@@ -491,6 +491,58 @@ console.log(output);
 // Vertinimą reikia įvesti per prompt.
 
 // let grade = prompt('Enter your grade:');
-let grade = 1;
+let grade = 10;
 
 console.log(grade);
+console.log(typeof grade);
+console.log(isNaN(grade));
+
+if (isNaN(grade)) {
+  console.log('Privaloma įvesti skaičių.');
+} else if (grade == 1) {
+  console.log('Labai blogai');
+} else if (grade == 2) {
+  console.log('Blogai');
+} else if (grade == 3) {
+  console.log('Vidutiniškai');
+} else if (grade == 4) {
+  console.log('Gerai');
+} else if (grade == 5) {
+  console.log('Puikiai');
+} else {
+  console.log('Įvestas skaičius yra neteisingas. Reikia įvesti skaičių nuo 1 iki 5');
+}
+
+
+
+// SWITCH
+let streetLight = 'adasd';
+
+// if (streetLight === 'green') {
+//   console.log('Galima eiti!');
+// } else if (streetLight === 'yellow') {
+//   console.log('Pasiruošk');
+// } else if (streetLight === 'red') {
+//   console.log('STOP!');
+// } else {
+//   console.log('Sugedo :(');
+// }
+
+
+switch (streetLight) {
+  case 'green':
+    console.log('Galima eiti!');
+    break;
+    
+  case 'yellow':
+    console.log('Pasiruošk');
+    break;
+    
+  case 'red':
+    console.log('STOP');
+    break;
+
+  default:
+    console.log('Sugedo');
+    break;
+}
