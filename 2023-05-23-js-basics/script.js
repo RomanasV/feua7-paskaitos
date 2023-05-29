@@ -546,3 +546,43 @@ switch (streetLight) {
     console.log('Sugedo');
     break;
 }
+
+let personGrade = 4;
+
+switch (personGrade) {
+  case 1:
+  case 2:
+  case 3:
+    console.log('Labai blogai');
+    break;
+  case 4:
+  case 5:
+  case 6:
+    console.log('Blogai');
+    break;
+  case 7:
+  case 8:
+  case 9:
+    console.log('Vidutiniškai');
+    break;
+  case 10:
+  case 11:
+  case 12:
+    console.log('Gerai');
+    break;
+  case 13:
+  case 14:
+  case 15:
+    console.log('Puikiai');
+    break;
+  default:
+    console.log('Įvestas skaičius yra neteisingas. Reikia įvesti skaičių nuo 1 iki 5');
+    break;
+}
+
+
+// PASISVEIKINIMAS
+let isLoggedIn = false;
+let personName = 'John';
+let time = 15;
+let isBirthday = true;
