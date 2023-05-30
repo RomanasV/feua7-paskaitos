@@ -63,3 +63,4 @@ Pasisveikinimas
 3.3. 19-4 val. „Good Evening"
 3.4. Jeigu įrašytas blogas laikas, tai turi pasisveikinti "Hello"
 4. Jeigu vartotojas yra ir prisijungęs, ir šiandien yra jo gimtadienis, tai prie pasisveikinimo dar turi būti parašytas ir pasveikinimas, pvz.: „Good Morning, Tom and have a great birthday!"
+

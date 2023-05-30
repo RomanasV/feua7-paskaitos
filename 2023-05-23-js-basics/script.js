@@ -581,8 +581,96 @@ switch (personGrade) {
 }
 
 
+// Pasisveikinimas
+// 1. Jeigu vartotojas prisijungęs (true/false), tai prie pasisveikinimo reikia prirašyti jo vardą, pvz. „Good Morning, Tom.".
+// 2. Jeigu vartotojas nėra prisijungęs, tai išvesti tik tekstą „Good Morning.".
+// 3. Priklausomai nuo paros laiko, pasisveikinimas turėtų būti skirtingas:
+// 3.1. 5-12 val. „Good Morning"
+// 3.2. 13-18 val. „Good Afternoon"
+// 3.3. 19-4 val. „Good Evening"
+// 3.4. Jeigu įrašytas blogas laikas, tai turi pasisveikinti "Hello"
+// 4. Jeigu vartotojas yra ir prisijungęs, ir šiandien yra jo gimtadienis, tai prie pasisveikinimo dar turi būti parašytas ir pasveikinimas, pvz.: „Good Morning, Tom and have a great birthday!"
+
 // PASISVEIKINIMAS
-let isLoggedIn = false;
+
+// PIRMAS BŪDAS
+// let isLoggedIn = true;
+// let personName = 'John';
+// let time = 16;
+// let isBirthday = true;
+
+// let greetingOutput = '';
+
+// if (time >= 5 && time < 13) {
+
+//   if (isLoggedIn && isBirthday) {
+//     greetingOutput ='Good Morning, ' + personName + ' and have a great birthday.';
+//   } else if (isLoggedIn) {
+//     greetingOutput ='Good Morning, ' + personName;
+//   } else {
+//     greetingOutput ='Good Morning';
+//   }
+
+// } else if (time >= 13 && time < 19) {
+
+//   if (isLoggedIn && isBirthday) {
+//     greetingOutput ='Good Afternoon, ' + personName + ' and have a great birthday.';
+//   } else if (isLoggedIn) {
+//     greetingOutput ='Good Afternoon, ' + personName;
+//   } else {
+//     greetingOutput ='Good Afternoon';
+//   }
+
+// } else if (time >= 19 && time < 24 || time >= 0 && time < 5) {
+
+//   if (isLoggedIn && isBirthday) {
+//     greetingOutput ='Good Evening, ' + personName + ' and have a great birthday.';
+//   } else if (isLoggedIn) {
+//     greetingOutput ='Good Evening, ' + personName;
+//   } else {
+//     greetingOutput ='Good Evening';
+//   }
+
+// } else {
+
+//   if (isLoggedIn && isBirthday) {
+//     greetingOutput ='Hello, ' + personName + ' and have a great birthday.';
+//   } else if (isLoggedIn) {
+//     greetingOutput ='Hello, ' + personName;
+//   } else {
+//     greetingOutput ='Hello';
+//   }
+
+// }
+
+// console.log(greetingOutput);
+
+// ANTRAS BŪDAS
+let isLoggedIn = true;
 let personName = 'John';
-let time = 15;
-let isBirthday = true;
+let time = 1;
+let isBirthday = false;
+
+let greetingText = '';
+let nameText = '';
+let birthdayText = '';
+
+if (time >= 5 && time < 13) {
+  greetingText = 'Good Morning';
+} else if (time >= 13 && time < 19) {
+  greetingText = 'Good Afternoon';
+} else if (time >= 19 && time < 24 || time >= 0 && time < 5) {
+  greetingText = 'Good Evening';
+} else {
+  greetingText = 'Hello';
+}
+
+if (isLoggedIn && personName) {
+  nameText = ', ' + personName;
+}
+
+if (isLoggedIn && isBirthday) {
+  birthdayText = ' and have a great birthday!';
+}
+
+console.log(greetingText + nameText + birthdayText);
