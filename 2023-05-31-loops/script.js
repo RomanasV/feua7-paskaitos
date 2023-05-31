@@ -1,3 +1,5 @@
+console.groupCollapsed('Pre Loop');
+
 // console.log('- ' + 1 + '!!!');
 // console.log('- ' + 2 + '!!!');
 // console.log('- ' + 3 + '!!!');
@@ -83,6 +85,8 @@ console.log(str);
 str += '.';
 console.log(str);
 
+console.groupEnd();
+
 // FOR CIKLAS (LOOP):
 // 1. Iniciavimo žodelis - for
 // 2. Paprasti skliaustai - ()
@@ -102,7 +106,13 @@ console.log(str);
 //   console.log(i);
 // }
 
-for (let i = 1; i <= 20; i++) {
-  console.log('- ' + i + ' !!!');
-}
+// for (let i = 1; i <= 20; i++) {
+//   console.log('- ' + i + ' !!!');
+// }
 
+// Sukurti ciklą su skaičiais nuo 1 iki 100. Šie ciklai:
+// 1. Padaugina skaičių iš 2.
+
+// for (let i = 1; i <= 100; i++) {
+//   console.log(i * 2);
+// }
