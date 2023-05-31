@@ -113,6 +113,21 @@ console.groupEnd();
 // Sukurti ciklą su skaičiais nuo 1 iki 100. Šie ciklai:
 // 1. Padaugina skaičių iš 2.
 
-// for (let i = 1; i <= 100; i++) {
+for (let i = 1; i <= 100; i++) {
+  let answer = i * 2;
+  let output = `${i} * 2 = ${answer}`;
+  console.log(output);
+}
+
+// for (let i = 100; i >= 1; i--) {
 //   console.log(i * 2);
+// }
+
+// 2. Padaugina skaičių iš 5.
+// for (let i = 1; i <= 100; i++) {
+//   console.log(i * 5);
+// }
+
+// for (let i = 100; i >= 1; i--) {
+//   console.log(i * 5);
 // }
