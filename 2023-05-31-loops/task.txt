@@ -5,3 +5,11 @@ Sukurti ciklą su skaičiais nuo 1 iki 100. Šie ciklai:
 4. Atima iš skaičiaus 2.
 5. Pakelia skaičių kvadratu.
 6. Pakelia skaičių kūbu.
+
+7. Sukurti analogiškas funkcijas pirmoms užduotims, tačiau padaryti, jog ciklai skaičiuotųsi nuo 100 iki 1.
+
+8. Kiekvienos užduoties išvesties tekstą suformuluoti, jog būtų parašytas užduoties sprendimas, pvz.: 
+1 * 2 = 2
+2 * 2 = 4
+3 * 2 = 6
+ir t.t.

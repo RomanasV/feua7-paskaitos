@@ -113,21 +113,105 @@ console.groupEnd();
 // Sukurti ciklą su skaičiais nuo 1 iki 100. Šie ciklai:
 // 1. Padaugina skaičių iš 2.
 
-for (let i = 1; i <= 100; i++) {
-  let answer = i * 2;
-  let output = `${i} * 2 = ${answer}`;
-  console.log(output);
-}
+// for (let i = 1; i <= 100; i++) {
+//   let answer = i * 2;
+//   let output = `${i} * 2 = ${answer}`;
+//   console.log(output);
+// }
 
 // for (let i = 100; i >= 1; i--) {
-//   console.log(i * 2);
+//   let answer = i * 2;
+//   let output = `${i} * 2 = ${answer}`;
+//   console.log(output);
 // }
 
 // 2. Padaugina skaičių iš 5.
 // for (let i = 1; i <= 100; i++) {
-//   console.log(i * 5);
+//   let answer = i * 5;
+//   let output = `${i} * 5 = ${answer}`;
+
+//   console.log(output);
 // }
 
 // for (let i = 100; i >= 1; i--) {
-//   console.log(i * 5);
+//   let answer = i * 5;
+//   let output = `${i} * 5 = ${answer}`;
+//   console.log(output);
 // }
+
+// 3. Prideda prie skaičiaus 5.
+// for (let i = 1; i <= 100; i++) {
+//   let answer = i + 5;
+//   let output = `${i} + 5 = ${answer}`;
+//   console.log(output);
+// }
+
+// for (let i = 100; i >= 1; i--) {
+//   let answer = i + 5;
+//   let output = `${i} + 5 = ${answer}`;
+//   console.log(output)
+// }
+
+// 4. Atima iš skaičiaus 2.
+// for (let i = 1; i <= 100; i++) {
+//   let answer = i - 2;
+//   let output = `${i} - 2 = ${answer}`;
+//   console.log(output);
+// }
+
+// for (let i = 100; i >= 1; i--) {
+//   let answer = i - 2;
+//   let output = `${i} - 2 = ${answer}`;
+//   console.log(output);
+// }
+
+// 5. Pakelia skaičių kvadratu.
+// for (let i = 1; i <= 100; i++) {
+//   // let answer = i * i;
+//   // let answer = i**2;
+//   let answer = Math.pow(i, 2);
+//   let output = `${i}**2 = ${answer}`;
+
+//   console.log(output);
+// }
+
+// for (let i = 100; i >= 1; i--) {
+//   let answer = Math.pow(i, 2);
+//   let output = `${i}**2 = ${answer}`;
+
+//   console.log(output);
+// }
+
+// 6. Pakelia skaičių kūbu.
+// for (let i = 1; i <= 100; i++) {
+//   let nth = 3;
+//   let answer = Math.pow(i, nth);
+//   let output = `${i}**${nth} = ${answer}`;
+
+//   console.log(output);
+// }
+
+// for (let i = 100; i >= 1; i--) {
+//   let nth = 3;
+//   let answer = Math.pow(i, nth);
+//   let output = `${i}**${nth} = ${answer}`;
+
+//   console.log(output);
+// }
+
+
+// WHILE CIKLAS
+
+// let n = 0;
+// while (n < 0) {
+//   console.log(n);
+//   n++;
+// } 
+
+// do.. while ciklas
+
+// let m = 0;
+// do {
+//   console.log(m);
+//   m++
+// } while (m < 0);
