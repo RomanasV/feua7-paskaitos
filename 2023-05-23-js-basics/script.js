@@ -35,6 +35,9 @@ console.log(vardas + " " + pavarde + " (amžius " + amzius + " m.), asmens kodas
 
 console.log(`${vardas} ${pavarde} (amžius ${amzius} m.), asmens kodas: ${asmensKodas}, gyvenamasis miestas: ${miestas}.`);
 
+let h3Element = document.querySelector('h3');
+h3Element.textContent = `${vardas} ${pavarde} (amžius ${amzius} m.), asmens kodas: ${asmensKodas}, gyvenamasis miestas: ${miestas}.`;
+
 // John said: "Good morning".
 console.log('John said: "Good morning".');
 console.log(`John said: "Good morning".`);
@@ -59,6 +62,9 @@ console.log("John `said`: " + `"That's \\my\\ car".`);
 console.log('John \\`said\\`: "That\'s my car".');
 console.log("John \\`said\\`: \"That's my car\".");
 console.log(`John \\\`said\\\`: "That's my car".`);
+
+let anotherH3Element = document.querySelector('#task-2');
+anotherH3Element.textContent = `John \\\`said\\\`: "That's my car".`;
 
 // Matematiniai operatoriai
 let num1 = 22;
@@ -674,3 +680,107 @@ if (isLoggedIn && isBirthday) {
 }
 
 console.log(greetingText + nameText + birthdayText);
+
+
+
+let day = 4;
+
+switch (day) {
+  case 4:
+    console.log('Mažasis penktadienis');
+  case 1:
+  case 2:
+  case 3:
+  case 5:
+    console.log('Darbo diena');
+    break;
+  case 6:
+  case 7:
+    console.log('Savaitgalis');
+    break;
+  default:
+    console.log('Error');
+}
+
+let pAge = 5;
+
+switch (pAge) {
+  case 0:
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+    console.log('Į mokyklą neina');
+    break;
+  case 6:
+    console.log('Į mokyklą tikriausiai neina, tačiau gali būti ir pirmokas.');
+    break;
+  case 7:
+  case 8:
+  case 9:
+    console.log('Pradinukas.');
+    break;
+  case 10:
+    console.log('Tikriausiai mokosi pradinėje, tačiau gali būti ir penktokas.');
+    break;
+  case 11:
+  case 12:
+  case 13:
+    console.log('Pagrindinė');
+    break;
+  case 14:
+    console.log('Tikriausiai mokosi pagrindinėje, tačiau gali būti ir devintokas.');
+    break;
+  case 15:
+  case 16:
+  case 17:
+    console.log('Gimnazija.');
+    break;
+  case 18:
+    console.log('Tikriausiai mokosi gimnazijoje, tačiau mokyklą gali būti ir baigęs.');
+    break;
+  default:
+    if (pAge < 0) {
+      console.log('Amžius per mažas');
+    } else if (pAge > 120) {
+      console.log('Amžius per didelis');
+    } else {
+      console.log('Baigė mokyklą');
+    }
+}
+
+switch (true) {
+  case pAge < 0:
+    console.log('Įvestas amžius yra per mažas. Turi būti teigiamas skaičius.');
+    break;
+  case pAge < 6:
+    console.log('Į mokyklą neina');
+    break;
+  case pAge < 7:
+    console.log('Į mokyklą tikriausiai neina, tačiau gali būti ir pirmokas.');
+    break;
+  case pAge < 10:
+    console.log('Pradinukas');
+    break;
+  case pAge < 11:
+    console.log('Tikriausiai mokosi pradinėje, tačiau gali būti ir penktokas.');
+    break;
+  case pAge < 14:
+    console.log('Pagrindinė.');
+    break;
+  case pAge < 15:
+    console.log('Tikriausiai mokosi pagrindinėje, tačiau gali būti ir devintokas..');
+    break;
+  case pAge < 18:
+    console.log('Gimnazija.');
+    break;
+  case pAge < 19:
+    console.log('Tikriausiai mokosi gimnazijoje, tačiau mokyklą gali būti ir baigęs.');
+    break;
+  case pAge < 120:
+    console.log('Mokyklą baigė.');
+    break;
+  default:
+    console.log('Įvestas amžius per didelis');
+}
