@@ -293,6 +293,8 @@ console.groupEnd();
 // }
 
 
+let ulElement = document.querySelector('ul');
+
 // TREČIAS BŪDAS
 for (let i = 1; i <= 350; i++) {
   let output = '';
@@ -306,5 +308,13 @@ for (let i = 1; i <= 350; i++) {
 
   if (!output) output = i;
 
-  console.log(output);
+  let liElement = document.createElement('li');
+  liElement.textContent = output;
+  ulElement.append(liElement);
+
+  if (i > 200) {
+    liElement.style.color = 'green';
+  } else if (i > 100) {
+    liElement.style.color = 'orange';
+  }
 }
