@@ -230,7 +230,7 @@ if (personAge >= 0 && personAge < 18) {
   console.log('Pirkti bilieta galima');
 }
 
-personAge = 20;
+personAge = 15;
 
 if (personAge >= 0 && personAge < 16) {
   console.log('Pirkti bilieto negalima');
@@ -246,18 +246,22 @@ if (personAge >= 0 && personAge < 16) {
 // Mažiau už 110
 // Viskas kas liko (daugiau už 110)
 
+let task3Element = document.querySelector('#task-3');
+let task3Output = '';
+
 if (personAge < 0) {
-  console.log('Amžius privalo būti teigiamas skaičius');
+  task3Output = 'Amžius privalo būti teigiamas skaičius';
 } else if (personAge < 16) {
-  console.log('Pirkti bilieto negalima');
+  task3Output = 'Pirkti bilieto negalima';
 } else if (personAge < 18) {
-  console.log('Pirkti bilietą galima su tėvų sutikimu');
+  task3Output = 'Pirkti bilietą galima su tėvų sutikimu';
 } else if (personAge < 110) {
-  console.log('Pirkti bilieta galima');
+  task3Output = 'Pirkti bilieta galima';
 } else {
-  console.log('Įvestas amžius yra per didelis');
+  task3Output = 'Įvestas amžius yra per didelis';
 }
 
+task3Element.textContent = task3Output;
 
 // let password = 'supersdfsdfslaps';
 // console.log(password.length);
@@ -269,7 +273,8 @@ if (personAge < 0) {
 // 2.1. Patikrinti ar jis yra ilgesnis už 20 simbolių. Jeigu ilgesnis, tai parašyti: „Slaptažodis tinkamas".
 // 2.2. Jeigu jis nėra ilgesnis už 20 simbolių, tai parašyti jog: „Slaptažodis yra tinkamas. Tačiau rekomenduojama jog jis būtų bent 21 simbolio ilgumo."
 
-let originalPassword = 'aasdads#afdsdfsdfsdfsdfds';
+
+let originalPassword = 'sdfsd#fsdfds';
 let password = originalPassword.trim();
 let passwordLength = password.length;
 
@@ -289,16 +294,24 @@ if (!password.includes('#')) {
   
 }
 
+let contentElement = document.querySelector('#content');
+let task4Element = document.createElement('h4');
+
+contentElement.append(task4Element);
+
+let task4Output = '';
+
 if (!password.includes('#')) {
-  console.log('Grodažymės yra privalomos');
+  task4Output ='Grodažymės yra privalomos';
 } else if (passwordLength < 16) {
-  console.log('Slaptažodis yra per trumpas. Jis privalo būti bent 16 simbolių ilgumo.');
+  task4Output ='Slaptažodis yra per trumpas. Jis privalo būti bent 16 simbolių ilgumo.';
 } else if (passwordLength < 21) {
-  console.log('Slaptažodis yra tinkamas. Tačiau rekomenduojama jog jis būtų bent 21 simbolio ilgumo.');
+  task4Output ='Slaptažodis yra tinkamas. Tačiau rekomenduojama jog jis būtų bent 21 simbolio ilgumo.';
 } else {
-  console.log('Slaptažodis tinkamas');
+  task4Output ='Slaptažodis tinkamas';
 }
-  
+
+task4Element.textContent = task4Output;
 
 // Pagal amžiu surašyti į kurią klasė eina mokinys:
 // 1. Iki 6 metų į mokyklą neina.
@@ -316,30 +329,36 @@ if (!password.includes('#')) {
 // 7.3. Jeigu amžius yra 18 metai, tai parašyti: "Tikriausiai mokosi gimnazijoje, tačiau mokyklą gali būti ir baigęs."
 
 let age = 7;
+let ageOutput = '';
 
 if (age < 0) {
-  console.log('Įvestas amžius yra per mažas. Turi būti teigiamas skaičius.');
+  ageOutput = 'Įvestas amžius yra per mažas. Turi būti teigiamas skaičius.';
 } else if (age < 6) {
-  console.log('Į mokyklą neina');
+  ageOutput = 'Į mokyklą neina';
 } else if (age < 7) {
-  console.log('Į mokyklą tikriausiai neina, tačiau gali būti ir pirmokas.');
+  ageOutput = 'Į mokyklą tikriausiai neina, tačiau gali būti ir pirmokas.';
 } else if (age < 10) {
-  console.log('Pradinukas');
+  ageOutput = 'Pradinukas';
 } else if (age < 11) {
-  console.log('Tikriausiai mokosi pradinėje, tačiau gali būti ir penktokas.');
+  ageOutput = 'Tikriausiai mokosi pradinėje, tačiau gali būti ir penktokas.';
 } else if (age < 14) {
-  console.log('Pagrindinė');
+  ageOutput = 'Pagrindinė';
 } else if (age < 15) {
-  console.log('Tikriausiai mokosi pagrindinėje, tačiau gali būti ir devintokas.');
+  ageOutput = 'Tikriausiai mokosi pagrindinėje, tačiau gali būti ir devintokas.';
 } else if (age < 18) {
-  console.log('Gimnazija');
+  ageOutput = 'Gimnazija';
 } else if (age < 19) {
-  console.log('Tikriausiai mokosi gimnazijoje, tačiau mokyklą gali būti ir baigęs.');
+  ageOutput = 'Tikriausiai mokosi gimnazijoje, tačiau mokyklą gali būti ir baigęs.';
 } else if (age < 120) {
-  console.log('Mokyklą baigė')
+  ageOutput = 'Mokyklą baigė';
 } else {
-  console.log('Įvestas amžius per didelis');
+  ageOutput = 'Įvestas amžius per didelis';
 }
+
+let task5Element = document.createElement('p');
+contentElement.append(task5Element);
+
+task5Element.textContent = ageOutput;
 
 console.groupEnd();
 
@@ -655,7 +674,7 @@ switch (personGrade) {
 let isLoggedIn = true;
 let personName = 'John';
 let time = 1;
-let isBirthday = false;
+let isBirthday = true;
 
 let greetingText = '';
 let nameText = '';
@@ -681,6 +700,10 @@ if (isLoggedIn && isBirthday) {
 
 console.log(greetingText + nameText + birthdayText);
 
+let task6Element = document.createElement('h1');
+task6Element.textContent = greetingText + nameText + birthdayText;
+
+contentElement.append(task6Element);
 
 
 let day = 4;
