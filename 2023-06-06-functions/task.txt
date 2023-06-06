@@ -39,3 +39,14 @@ Sukurti:
 7. Funkciją, kuri konvertuoja mėnesius į minutes:
 7.1. Funkcija priima vieną argumentą: mėnesių skaičių.
 7.2. Funkcija grąžina atsakymą tokiu formatu: 2 mėnesiai turi 87600 minutes.
+
+8. Funkciją, kuri konvertuoja dienas į pasirinktą formatą (minutes, valandas, savaites, mėnesius arba metus):
+8.1. Funkcija priima du argumentus: 
+  8.1.1. Dienų skaičių.
+  8.1.2. Formatą. Galimos formato reikšmės yra:
+    8.1.2.1. minutes
+    8.1.2.2. hours
+    8.1.2.3. weeks
+    8.1.2.4. months
+    8.1.2.5. years
+8.2. Funkcija konvertuoja dienas į pasirinktą formatą ir grąžina atsakymą tokiu formatu: 5 days - 7200 minutes.
