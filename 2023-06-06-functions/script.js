@@ -54,10 +54,37 @@ function helloWithName(name, surname) {
 helloWithName('John');
 helloWithName('Steve', 'Steve');
 
-function perimeter() {
+// function getPerimeter(width, length, units) {
+//   if (width > 0 && length > 0) {
+//     let perimeter = (width + length) * 2;
 
+//     let unitsText = 'vnt';
+
+//     if (units) {
+//       unitsText = units;
+//     }
+    
+//     console.log(`Perimetras: ${perimeter} ${unitsText}.`);
+//   } else {
+//     console.log('ERROR: duomenys įvesti neteisingai...');
+//   }
+// }
+
+function getPerimeter(width, length, units = 'vnt') {
+  if (width > 0 && length > 0) {
+    let perimeter = (width + length) * 2;
+    
+    console.log(`Perimetras: ${perimeter} ${units}.`);
+  } else {
+    console.log('ERROR: duomenys įvesti neteisingai...');
+  }
 }
 
-perimeter(10);
-perimeter(15);
-perimeter(20);
+
+getPerimeter(10, 10, 'cm');
+getPerimeter(10, 10, 'm');
+getPerimeter(10, 10, 'km');
+getPerimeter(10, 10);
+getPerimeter(10, -15);
+getPerimeter();
+getPerimeter(10);
