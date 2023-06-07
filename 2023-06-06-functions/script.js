@@ -11,16 +11,16 @@
 // 9. 10 ilgis ir 60 plotis.
 // 10. 10 ilgis ir 120 plotis.
 
-console.log('Perimetras: ' + (10 + 10) * 2 + ' cm.');
-console.log('Perimetras: ' + (10 + 25) * 2 + ' cm.');
-console.log('Perimetras: ' + (10 + 30) * 2 + ' cm.');
-console.log('Perimetras: ' + (10 + 35) * 2 + ' cm.');
-console.log('Perimetras: ' + (10 + 40) * 2 + ' cm.');
-console.log('Perimetras: ' + (10 + 45) * 2 + ' cm.');
-console.log('Perimetras: ' + (10 + 50) * 2 + ' cm.');
-console.log('Perimetras: ' + (10 + 55) * 2 + ' cm.');
-console.log('Perimetras: ' + (10 + 60) * 2 + ' cm.');
-console.log('Perimetras: ' + (10 + 120) * 2 + ' cm.');
+// console.log('Perimetras: ' + (10 + 10) * 2 + ' cm.');
+// console.log('Perimetras: ' + (10 + 25) * 2 + ' cm.');
+// console.log('Perimetras: ' + (10 + 30) * 2 + ' cm.');
+// console.log('Perimetras: ' + (10 + 35) * 2 + ' cm.');
+// console.log('Perimetras: ' + (10 + 40) * 2 + ' cm.');
+// console.log('Perimetras: ' + (10 + 45) * 2 + ' cm.');
+// console.log('Perimetras: ' + (10 + 50) * 2 + ' cm.');
+// console.log('Perimetras: ' + (10 + 55) * 2 + ' cm.');
+// console.log('Perimetras: ' + (10 + 60) * 2 + ' cm.');
+// console.log('Perimetras: ' + (10 + 120) * 2 + ' cm.');
 
 // DRY - Don't Repeat Yourself
 
@@ -32,27 +32,30 @@ console.log('Perimetras: ' + (10 + 120) * 2 + ' cm.');
 // 4. Riestiniai skliaustai {} - funkcijos apibrėžimas
 
 function hello() {
-  console.log('Hello, John!');
+  return 'Hello, John!';
 }
 
 // Funkcijos iškvietimas:
 // 1. Funkcijos pavadinimas
 // 2. Paprasti skliasutai ()
 
-hello();
+console.log(hello());
+document.querySelector('h1').textContent = hello();
 
-
+let helloText = hello();
+console.log('Pasisveikinimas: ' + helloText);
+console.log('Pasisveikinimas: ' + hello());
 
 function helloWithName(name, surname) {
   if (surname) {
-    console.log(`Hello, ${name} ${surname}`);
+    return `Hello, ${name} ${surname}`;
   } else {
-    console.log(`Hello, ${name}`);
+    return `Hello, ${name}`;
   }
 }
 
-helloWithName('John');
-helloWithName('Steve', 'Steve');
+console.log(helloWithName('John'));
+console.log(helloWithName('Steve', 'Steve'));
 
 // function getPerimeter(width, length, units) {
 //   if (width > 0 && length > 0) {
@@ -70,24 +73,33 @@ helloWithName('Steve', 'Steve');
 //   }
 // }
 
+// function getPerimeter(width, length, units = 'vnt') {
+//   if (width > 0 && length > 0) {
+//     let perimeter = (width + length) * 2;
+    
+//     return `Perimetras: ${perimeter} ${units}.`;
+//   } else {
+//     return 'ERROR: duomenys įvesti neteisingai...';
+//   }
+// }
+
 function getPerimeter(width, length, units = 'vnt') {
   if (width > 0 && length > 0) {
     let perimeter = (width + length) * 2;
     
-    console.log(`Perimetras: ${perimeter} ${units}.`);
-  } else {
-    console.log('ERROR: duomenys įvesti neteisingai...');
+    return `Perimetras: ${perimeter} ${units}.`;
   }
+  
+  return 'ERROR: duomenys įvesti neteisingai...';
 }
 
-
-getPerimeter(10, 10, 'cm');
-getPerimeter(10, 10, 'm');
-getPerimeter(10, 10, 'km');
-getPerimeter(10, 10);
-getPerimeter(10, -15);
-getPerimeter();
-getPerimeter(10);
+console.log(getPerimeter(10, 10, 'cm'));
+document.querySelector('h1').textContent = getPerimeter(10, 10, 'm');
+// getPerimeter(10, 10, 'km');
+// getPerimeter(10, 10);
+// getPerimeter(10, -15);
+// getPerimeter();
+// getPerimeter(10);
 
 
 // Užduotis 1:
@@ -97,19 +109,22 @@ getPerimeter(10);
 // 4. Į konsolę išvesti šios funkcijos rezultatą.
 
 function getRectangleArea(width = 0, length = 0, units = 'vnt') {
+  let output = '';
+
   if (width > 0 && length > 0) { 
     let area = width * length;
-    let output = `Stačiakampio plotas yra ${area} kv. ${units}.`;
-    console.log(output);
+    output = `Stačiakampio plotas yra ${area} kv. ${units}.`;
   } else {
-    console.log('Neteisingai įvesti duomenys');
+    output = 'Neteisingai įvesti duomenys';
   }
+
+  return output;
 }
 
-getRectangleArea(10, 15, 'cm');
-getRectangleArea(10, 15);
-getRectangleArea(10);
-getRectangleArea();
+console.log(getRectangleArea(10, 15, 'cm'));
+// getRectangleArea(10, 15);
+// getRectangleArea(10);
+// getRectangleArea();
 
 // Užduotis 2:
 // Atlikti tą patį kaip ir pirmoje užduotyje, tačiau apskaičiuoti stačiojo trikampio plotą.
@@ -117,26 +132,32 @@ function getTriangleArea(width = 0, length = 0, units = 'vnt') {
   if (width > 0 && length > 0) { 
     let area = width * length / 2;
     let output = `Stačiojo trikampio plotas yra ${area} kv. ${units}.`;
-    console.log(output);
+    return output;
   } else {
-    console.log('Neteisingai įvesti duomenys');
+    return 'Neteisingai įvesti duomenys';
   }
 }
 
-getTriangleArea(15, 10, 'm');
-getTriangleArea(15, 10);
-getTriangleArea(15);
-getTriangleArea();
-getTriangleArea(-10, 10);
+console.log(getTriangleArea(15, 10, 'm'));
+// getTriangleArea(15, 10);
+// getTriangleArea(15);
+// getTriangleArea();
+// getTriangleArea(-10, 10);
 
 // Užduotis 3:
 // Sukurti naują funkciją, kuri apjungtų šias dvi užduotis ir išvestų abu rezultatus.
 function getAllArea(shapeWidth, shapeLength, shapeUnits) {
-  getRectangleArea(shapeWidth, shapeLength, shapeUnits);
-  getTriangleArea(shapeWidth, shapeLength, shapeUnits);
+  // return getRectangleArea(shapeWidth, shapeLength, shapeUnits) + ' ' + getTriangleArea(shapeWidth, shapeLength, shapeUnits);
+
+  let rectangleAreaText = getRectangleArea(shapeWidth, shapeLength, shapeUnits);
+  let triangleAreaText = getTriangleArea(shapeWidth, shapeLength, shapeUnits);
+
+  return rectangleAreaText + ' ' + triangleAreaText;
 }
 
-getAllArea(15, 10, 'cm');
-getAllArea(15, 10);
-getAllArea(15);
-getAllArea();
+console.log('-----------');
+
+console.log(getAllArea(15, 10, 'cm'));
+// getAllArea(15, 10);
+// getAllArea(15);
+// getAllArea();
