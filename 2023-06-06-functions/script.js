@@ -88,3 +88,55 @@ getPerimeter(10, 10);
 getPerimeter(10, -15);
 getPerimeter();
 getPerimeter(10);
+
+
+// Užduotis 1:
+// 1. Sukurti funkciją, kuri skaičiuotų stačiakampio plotą.
+// 2. Funkcija turi priimti tris argumentus (ilgį, plotį ir matavimo vienetą).
+// 3. Funkcija turi grąžinti tekstą: „Stačiakampio plotas yra 10 kv. vnt."
+// 4. Į konsolę išvesti šios funkcijos rezultatą.
+
+function getRectangleArea(width = 0, length = 0, units = 'vnt') {
+  if (width > 0 && length > 0) { 
+    let area = width * length;
+    let output = `Stačiakampio plotas yra ${area} kv. ${units}.`;
+    console.log(output);
+  } else {
+    console.log('Neteisingai įvesti duomenys');
+  }
+}
+
+getRectangleArea(10, 15, 'cm');
+getRectangleArea(10, 15);
+getRectangleArea(10);
+getRectangleArea();
+
+// Užduotis 2:
+// Atlikti tą patį kaip ir pirmoje užduotyje, tačiau apskaičiuoti stačiojo trikampio plotą.
+function getTriangleArea(width = 0, length = 0, units = 'vnt') {
+  if (width > 0 && length > 0) { 
+    let area = width * length / 2;
+    let output = `Stačiojo trikampio plotas yra ${area} kv. ${units}.`;
+    console.log(output);
+  } else {
+    console.log('Neteisingai įvesti duomenys');
+  }
+}
+
+getTriangleArea(15, 10, 'm');
+getTriangleArea(15, 10);
+getTriangleArea(15);
+getTriangleArea();
+getTriangleArea(-10, 10);
+
+// Užduotis 3:
+// Sukurti naują funkciją, kuri apjungtų šias dvi užduotis ir išvestų abu rezultatus.
+function getAllArea(shapeWidth, shapeLength, shapeUnits) {
+  getRectangleArea(shapeWidth, shapeLength, shapeUnits);
+  getTriangleArea(shapeWidth, shapeLength, shapeUnits);
+}
+
+getAllArea(15, 10, 'cm');
+getAllArea(15, 10);
+getAllArea(15);
+getAllArea();
