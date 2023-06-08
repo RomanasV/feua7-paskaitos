@@ -24,6 +24,20 @@ console.groupCollapsed('Function basics');
 // console.log('Perimetras: ' + (10 + 60) * 2 + ' cm.');
 // console.log('Perimetras: ' + (10 + 120) * 2 + ' cm.');
 
+// Globalus ir lokalus scope
+let num = 5;
+
+function func(globalNum) {
+  let num = 10;
+  console.log(num);
+  console.log(globalNum);
+
+  let num2 = 20;
+  console.log(num2);
+}
+
+func(num);
+
 // DRY - Don't Repeat Yourself
 
 // FUNKCIJA
@@ -284,12 +298,14 @@ function convertDays(days, format) {
 
   if (format === 'minutes') { 
     let minutes = days * 24 * 60;
-    return `${days} days - ${minutes} minutes`;
+    let output = `${days} days - ${minutes} minutes`
+    return output;
   } 
   
   if (format === 'hours') {
     let hours = days * 24;
-    return `${days} days - ${hours} hours`;
+    let output = `${days} days - ${hours} hours`
+    return output;
   }
   
   if (format === 'weeks') {
@@ -311,3 +327,85 @@ function convertDays(days, format) {
 }
 
 console.log(convertDays(5, 'months'));
+
+// 9. Funkciją, kuri patikrina ar skaičius dalinasi iš kito skaičiaus:
+// 9.1. Funkcija priima du argumentus: 
+//   9.1.1. Skaičių, kuris bus dalinamas (dalinys).
+//   9.1.2. Skaičių, iš kurio bus dalinama (daliklis).
+// 9.2. Funkcija grąžina atsakymą tokiu formatu:
+//   9.2.1. Jeigu dalinasi: 10 dalinasi iš 5.
+//   9.2.2. Skaičius 11 nesidalina iš 5. Liekana yra 1.
+
+function numberChecker(dividend, divisor) {
+  let remainder = dividend % divisor;
+
+  if (remainder === 0) {
+    return `${dividend} dalinasi iš ${divisor}.`;
+  }
+
+  return `Skaičius ${dividend} nesidalina iš ${divisor}. Liekana yra ${remainder}.`;
+}
+
+console.log(numberChecker(10, 4));
+
+// 10. Funkciją, kuri patikrina ar įvestas tekstas turi porini simbolių skaičių ar neporinį.
+// function textChecker(str) {
+//   let strLength = str.length;
+
+//   if (strLength % 2 === 0) {
+//     return 'Porinis';
+//   }
+
+//   return 'Ne porinis';
+// }
+
+function textChecker(str) {
+  let strLength = str.length;
+
+  let output = (strLength % 2 === 0) ? 'Porinis' : 'Ne porinis';
+
+  return output;
+}
+
+console.log(textChecker('labas vakara'));
+
+// 11. Funkciją, kuri paima nurodytą simbolį iš žodžio ar sakinio. 
+// 11.1. Funkcija priima du argumentus: tekstą ir kelintą simbolį reikia grąžinti.
+// 11.2. Funkcija grąžina atsakymą tokiu formatu: Teksto "Labas" 3 raidė yra "b".
+
+// 11.3. Jeigu nurodytas skaičius yra didesnis nei tekstas turi simbolių, tai reikia grąžinti error'ą tokiu formatu: Tekstas "Labas" turi 5 simbolius, o jūs nurodėte grąžinti 8.
+
+// 11.4. Patobulinti funkciją, kad būtų galima įrašyti neigiamą skaičių, jeigu norima gauti teksto simbolį skaičiuojant nuo jo galo, o ne nuo priekio.
+
+function getLetter(str, num) {
+  let strLength = str.length;
+
+  if (isNaN(num)) {
+    return 'Privaloma įvesti skaičių';
+  }
+
+  if (num === 0) {
+    return 'Skaičius negali būti nulis';
+  }
+
+  if (strLength < num) {
+    let ouptut = `Tekstas "${str}" turi ${strLength} simbolius, o jūs nurodėte grąžinti ${num}.`;
+    return ouptut;
+  }
+
+  if (num < 0) {
+    let letterFromEnd = str.at(num);
+    let letterIndexFromEnd = num * -1;
+
+    let output = `Teksto "${str}" ${letterIndexFromEnd} raidė nuo galo yra "${letterFromEnd}".`;
+    return output;
+  }
+
+  let letterIndex = num - 1;
+  let letter = str[letterIndex];
+
+  let output = `Teksto "${str}" ${num} raidė yra "${letter}".`;
+  return output;
+}
+
+console.log(getLetter('labas', -50));
