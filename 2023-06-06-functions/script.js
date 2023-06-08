@@ -409,3 +409,37 @@ function getLetter(str, num) {
 }
 
 console.log(getLetter('labas', -50));
+
+
+
+
+
+function streetLight(light) {
+
+}
+
+streetLight('green');
+
+
+
+
+
+function checkAge(age) {
+
+}
+
+checkAge(5)
+checkAge(55)
+checkAge(15)
+
+
+
+
+
+
+function getGreeting(isLoggedIn, name, time, isBirthday) {
+
+}
+
+getGreeting(true, 'John', 5, false);
+getGreeting(false, 'Steve', 5, false);
