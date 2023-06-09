@@ -414,23 +414,117 @@ console.log(getLetter('labas', -50));
 
 
 
-function streetLight(light) {
+function streetLight(originalLight) {
+  let light = originalLight.toLowerCase();
 
+  if (light === 'green') {
+    return 'Galima eiti';
+  }
+  
+  if (light === 'yellow') {
+    return 'Pasiruošk';
+  }
+
+  if (light === 'red') {
+    return 'STOP';
+  }
+
+  return 'Sugedo :(';
 }
 
-streetLight('green');
+console.log(streetLight('red'));
 
 
 
 
 
-function checkAge(age) {
+// function lotteryTicket(age) {
+//   if (age < 0) {
+//     return 'Amžius privalo būti teigiamas skaičius';
+//   }
+  
+//   if (age < 16) {
+//     return 'Pirkti bilieto negalima';
+//   }
+  
+//   if(age < 18) {
+//     return 'Pirkti bilietą galima su tėvų sutikimu';
+//   }
+  
+//   if (age < 110) {
+//     return  'Pirkti bilieta galima';
+//   }
 
+//   return 'Įvestas amžius yra per didelis';
+// }
+
+// let lotteryTicket = function(age) {
+//   if (age < 0) {
+//     return 'Amžius privalo būti teigiamas skaičius';
+//   }
+  
+//   if (age < 16) {
+//     return 'Pirkti bilieto negalima';
+//   }
+  
+//   if(age < 18) {
+//     return 'Pirkti bilietą galima su tėvų sutikimu';
+//   }
+  
+//   if (age < 110) {
+//     return  'Pirkti bilieta galima';
+//   }
+
+//   return 'Įvestas amžius yra per didelis';
+// }
+
+let lotteryTicket = age => {
+  if (age < 0) {
+    return 'Amžius privalo būti teigiamas skaičius';
+  }
+  
+  if (age < 16) {
+    return 'Pirkti bilieto negalima';
+  }
+  
+  if(age < 18) {
+    return 'Pirkti bilietą galima su tėvų sutikimu';
+  }
+  
+  if (age < 110) {
+    return  'Pirkti bilieta galima';
+  }
+
+  return 'Įvestas amžius yra per didelis';
 }
 
-checkAge(5)
-checkAge(55)
-checkAge(15)
+console.log(lotteryTicket(5))
+console.log(lotteryTicket(15))
+console.log(lotteryTicket(17))
+console.log(lotteryTicket(20))
+
+
+let checkPassword = originalPassword => {
+  if (!originalPassword.includes('#')) {
+    return 'Grodažymės yra privalomos';
+  }
+
+  let password = originalPassword.trim();
+  let passwordLength = password.length;
+
+  if (passwordLength < 16) {
+    return 'Slaptažodis yra per trumpas. Jis privalo būti bent 16 simbolių ilgumo.';
+  }
+  
+  if (passwordLength < 21) {
+    return 'Slaptažodis yra tinkamas. Tačiau rekomenduojama jog jis būtų bent 21 simbolio ilgumo.';
+  } 
+
+  return 'Slaptažodis tinkamas';
+}
+
+console.log(checkPassword('asdjashd#kjasdsdf'))
+
 
 
 
