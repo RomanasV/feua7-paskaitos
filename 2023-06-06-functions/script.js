@@ -525,15 +525,197 @@ let checkPassword = originalPassword => {
 
 console.log(checkPassword('asdjashd#kjasdsdf'))
 
-
-
-
-
-
-
-function getGreeting(isLoggedIn, name, time, isBirthday) {
-
+function getGreeting(isLoggedIn, personName, time, isBirthday) {
+  let greetingText = '';
+  let nameText = '';
+  let birthdayText = '';
+  
+  if (time >= 5 && time < 13) {
+    greetingText = 'Good Morning';
+  } else if (time >= 13 && time < 19) {
+    greetingText = 'Good Afternoon';
+  } else if (time >= 19 && time < 24 || time >= 0 && time < 5) {
+    greetingText = 'Good Evening';
+  } else {
+    greetingText = 'Hello';
+  }
+  
+  if (isLoggedIn && personName) {
+    nameText = ', ' + personName;
+  }
+  
+  if (isLoggedIn && isBirthday) {
+    birthdayText = ' and have a great birthday!';
+  }
+  
+  return greetingText + nameText + birthdayText;
 }
 
-getGreeting(true, 'John', 5, false);
-getGreeting(false, 'Steve', 5, false);
+console.log(getGreeting(true, 'John', 5, false));
+console.log(getGreeting(false, 'Steve', 5, false));
+console.log(getGreeting(true, 'Steve', 18, true));
+
+function checkAge(age) {
+  let ageOutput = '';
+
+  if (age < 0) {
+    ageOutput = 'Įvestas amžius yra per mažas. Turi būti teigiamas skaičius.';
+  } else if (age < 6) {
+    ageOutput = 'Į mokyklą neina';
+  } else if (age < 7) {
+    ageOutput = 'Į mokyklą tikriausiai neina, tačiau gali būti ir pirmokas.';
+  } else if (age < 10) {
+    ageOutput = 'Pradinukas';
+  } else if (age < 11) {
+    ageOutput = 'Tikriausiai mokosi pradinėje, tačiau gali būti ir penktokas.';
+  } else if (age < 14) {
+    ageOutput = 'Pagrindinė';
+  } else if (age < 15) {
+    ageOutput = 'Tikriausiai mokosi pagrindinėje, tačiau gali būti ir devintokas.';
+  } else if (age < 18) {
+    ageOutput = 'Gimnazija';
+  } else if (age < 19) {
+    ageOutput = 'Tikriausiai mokosi gimnazijoje, tačiau mokyklą gali būti ir baigęs.';
+  } else if (age < 120) {
+    ageOutput = 'Mokyklą baigė';
+  } else {
+    ageOutput = 'Įvestas amžius per didelis';
+  }
+
+  return ageOutput;
+}
+
+console.log(checkAge(7));
+console.log(checkAge(10));
+console.log(checkAge(18));
+console.log(checkAge(25));
+
+function gameLevel1() {
+  // Kiek bus 123 + 456 = 579
+  let correctAnswer11 = 579;
+  // Kaip vadinasi arčiausiai Žemės esanti žvaigždė? sun
+  let correctAnswer12 = 'sun';
+
+  // let playerAnswer11 = 464;
+  // let playerAnswer12 = 'sun';
+  
+  let playerAnswer11 = prompt('Kiek bus 123 + 456?');
+  let playerAnswer12 = prompt('Kaip vadinasi arčiausiai Žemės esanti žvaigždė?');
+
+  if (correctAnswer11 == playerAnswer11 && correctAnswer12 == playerAnswer12) {
+    alert('Patekai į kitą lygį. Abu atsakymai teisingi.');
+    gameLevel2();
+  } else if (correctAnswer11 == playerAnswer11) {
+    alert('Patekai į kitą lygį. Tačiau antras atsakymas buvo neteisingas.');
+    gameLevel2();
+  } else if (correctAnswer12 == playerAnswer12) {
+    alert('Patekai į kitą lygį. Tačiau pirmas atsakymas buvo neteisingas.');
+    gameLevel2();
+  } else {
+    alert('Nepatekai į kitą lygį. Abu atsakymai buvo neteisingi :(');
+  }
+}
+
+// gameLevel1();
+
+function gameLevel2() {
+  let correctAnswer21 = 1;
+  let correctAnswer22 = 1;
+
+  let playerAnswer21 = prompt('Antras lygis. Pirmas klausimas');
+  let playerAnswer22 = prompt('Antras lygis. Antras klausimas');
+
+  if (correctAnswer21 == playerAnswer21 && correctAnswer22 == playerAnswer22) {
+    alert('Patekai į kitą lygį. Abu atsakymai teisingi.');
+    gameLevel3();
+  } else if (correctAnswer21 == playerAnswer21) {
+    alert('Nepatekai į kitą lygį. Tačiau pirmas atsakymas buvo teisingas.');
+  } else if (correctAnswer22 == playerAnswer22) {
+    alert('Nepatekai į kitą lygį. Tačiau antras atsakymas buvo teisingas.');
+  } else {
+    alert('Nepatekai į kitą lygį. Abu atsakymai buvo neteisingi :(');
+  }
+}
+
+function gameLevel3() {
+  let correctAnswer31 = 1;
+  let correctAnswer32 = 1;
+  let correctAnswer33 = 1;
+
+  let playerAnswer31 = prompt('Trecias lygis: pirmas klausimas');
+  let playerAnswer32 = prompt('Trecias lygis: antras klausimas');
+  let playerAnswer33 = prompt('Trecias lygis: trecias klausimas');
+
+  let answer31 = correctAnswer31 == playerAnswer31;
+  let answer32 = correctAnswer32 == playerAnswer32;
+  let answer33 = correctAnswer33 == playerAnswer33;
+
+  let successMessage = 'Patekai į kitą lygį!';
+  let failMessage = 'Nepatekai į kitą lygį.';
+
+  let output = '';
+
+  if (answer31 && answer32 && answer33) {
+    output = successMessage + ' Visi atsakymai teisingi.';
+  } else if (answer31 && answer32) {
+    output = successMessage + ' Tačiau trečias atsakymas buvo neteisingas.';
+  } else if (answer31 && answer33) {
+    output = successMessage + ' Tačiau antras atsakymas buvo neteisingas.';
+  } else if (answer32 && answer33) {
+    output = successMessage + ' Tačiau pirmas atsakymas buvo neteisingas.';
+  } else if (answer31) {
+    output = failMessage + ' Tačiau pirmas atsakymas buvo teisingas.';
+  } else if (answer32) {
+    output = failMessage + ' Tačiau antras atsakymas buvo teisingas.';
+  } else if (answer33) {
+    output = failMessage + ' Tačiau trečias atsakymas buvo teisingas.';
+  } else {
+    output = failMessage + ' Visi atsakymai buvo neteisingi.';
+  }
+
+  alert(output);
+}
+
+function loopTask1(start, end, nth) {
+  let ulElement = document.querySelector('ul');
+  
+  for (let i = start; i <= end; i = i + nth) {
+    let answer = i * 2;
+    let output = `${i} * 2 = ${answer}`;
+
+    let liElement = document.createElement('li');
+    liElement.textContent = output;
+    ulElement.append(liElement);
+  }
+}
+
+loopTask1(10, 70, 7);
+
+function fizzBuzzTask(start, end) {
+  let ulElement = document.querySelector('#fizz-buzz');
+
+  for (let i = start; i <= end; i++) {
+    let output = '';
+  
+    if (i % 3 === 0) output += 'Fizz';
+    if (i % 5 === 0) output += 'Buzz';
+    if (i % 7 === 0) output += 'Biff';
+    if (i % 9 === 0) output += 'Fuzz';
+    if (i % 11 === 0) output += 'Bizz';
+    if (i % 13 === 0) output += 'Buff';
+  
+    if (!output) output = i;
+  
+    let liElement = document.createElement('li');
+    liElement.textContent = output;
+    ulElement.append(liElement);
+  
+    if (i > 200) {
+      liElement.style.color = 'green';
+    } else if (i > 100) {
+      liElement.style.color = 'orange';
+    }
+  }
+}
+
+fizzBuzzTask(1, 78);
