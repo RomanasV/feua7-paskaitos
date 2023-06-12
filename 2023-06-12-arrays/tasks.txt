@@ -1,0 +1,27 @@
+Nemodifikuoti originalaus masyvo nuo 1 iki 2.7 užduoties.
+
+UZDUOTIS dirbant su pirkinių sąrašu (bent 7 pirkiniai):
+Kiekvienam iš punktų sukurti po atskirą kintamąjį ir jame išsaugoti reikšmę. Šią reikšmę atvaizduoti konsolėje.
+1. Išimti pirmus du pirkinius.
+2. Išimti tris paskutinius pirkinius.
+3. Išimti ketvirtą ir penktą pirkinį.
+4. Išimti antrą ir trečią pirkinį.
+5. Išimti visus, išskyrus pirmą pirkinį.
+
+
+Sukurti 10-ties filmų masyvą ir iš jo:
+2.1. Išimti pirmus 5 filmus.
+2.2. Išimti 4 paskutinius filmus.
+2.3. Išimti nuo trečio iki septinto filmo.
+2.4. Išimti antrą ir trečią filmą.
+2.5. Išimti visus, išskyrus pirmą filmą.
+2.6. Išimti 5 filmus skaičiuojant nuo trečio.
+2.7. Išimti tris filmus nuo galo, tačiau palikti paskutinį.
+
+2.8. Vietoje penkto filmo įrašyti du naujus filmus.
+2.9. Pašalinti pirmą filmą.
+2.10. Įrašyti naują filmą į masyvo pradžią.
+
+11.1. Išimti pirmus tris filmus, skaičiuojant nuo antro filmo.
+11.2. Išimti paskutinius tris filmus, skaičiuojant nuo priešpaskutinio filmo.
+11.3. Šiuos išimtus filmus išsaugoti naujame masyve ir padaryti, jog jo nariai būtų apsukti.
