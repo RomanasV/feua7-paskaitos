@@ -58,3 +58,27 @@ Atlikus šias užduotis eilės tvarka masyvas turėtų atrodyti taip:
 2.28. Gauti 12 narių skaičiuojant nuo 8.
 2.29. Gauti pirmus penkis ir paskutinius šešis masyvo narius. Šiuos narius gauti viename masyve. Reikės atlikti daugiau veiksmų nei prieš tai uždaviniuose.
 2.30. Gauti masyvo narius nuo 3 iki 5 ir nuo 15 iki 17. Šiuos narius gauti viename masyve. Reikės atlikti daugiau veiksmų nei prieš tai uždaviniuose.
+
+
+3. Tęsiant darbą su ankstesniu masyvu atlikti šias užduotis naudojant filter metodą. Kiekvienai užduočiai sukurti naują kintamąjį, jame išsaugoti reikšmę, kurią grąžina filter metodas, ir šį kintamąjį išvesti į konsolę:
+3.1. Gauti tik teigiamus skaičius.
+3.2. Gauti tik neigiamus skaičius.
+3.3. Gauti tik skaičius, kurie dalinasi iš 2.
+3.4. Gauti tik skaičius, kurie dalinasi iš 3.
+3.5. Gauti tik skaičius, kurie dalinasi iš 5.
+3.6. Gauti tik skaičius, kurie dalinasi iš 11.
+3.7. Gauti tik skaičius, kurie dalinasi iš 31.
+3.8. Gauti tik skaičius, kurie dalinasi iš 2 ir iš 3.
+3.9. Gauti tik skaičius, kurie dalinasi iš 3 ir iš 7.
+3.10. Gauti tik skaičius, kurie dalinasi iš 5 ir iš 9.
+3.11. Gauti tik skaičius, kurie dalinasi iš 5 ir iš 11.
+3.12. Gauti tik skaičius, kurie dalinasi iš 2, 8 ir 12.
+3.13. Gauti tik skaičius, kurie dalinasi iš 2 arba iš 3.
+3.14. Gauti tik skaičius, kurie dalinasi iš 3 arba iš 5.
+3.15. Gauti tik skaičius, kurie dalinasi iš 5 arba iš 6.
+3.16. Gauti tik skaičius, kurie dalinasi iš 7 arba iš 8.
+3.17. Gauti tik skaičius, kurie dalinasi iš 9 arba iš 13.
+3.18. Gauti tik skaičius, kurie dalinasi iš 2, 3 arba iš 5.
+3.19. Gauti tik skaičius, kurie dalinasi iš 5, 7 arba iš 9.
+3.20. Gauti tik skaičius, kurie dalinasi iš 7, 8 arba iš 11.
+3.21. Gauti tik skaičius, kurie dalinasi iš 9, 12 arba iš 13.

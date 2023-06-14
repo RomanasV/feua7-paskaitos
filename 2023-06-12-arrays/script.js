@@ -269,3 +269,32 @@ console.log(moviesTask112);
 let moviesList113 = moviesTask111.concat(moviesTask112).reverse();
 
 console.log(moviesList113);
+
+// FILTER metodas
+
+let originalNums = [1, 2, 3, 4, 5, 6, 7, 8, 10];
+console.log(originalNums);
+
+// originalNums.filter(function(element, index, array) {
+//   console.log(element);
+//   console.log(index);
+//   console.log(array);
+// });
+
+
+// originalNums.filter((element, index, array) => {
+//   console.log(element);
+//   console.log(index);
+//   console.log(array);
+// });
+
+// let filteredNums = originalNums.filter((num) => {
+//   return num > 5;
+// });
+
+// let filteredNums = originalNums.filter(num => num > 5);
+// let filteredNums = originalNums.filter(num => num > 5 && num < 8);
+let filteredNums = originalNums.filter(num => num > 5 && num < 8 && num % 2 === 0);
+
+console.log(filteredNums);
+console.log(originalNums)
