@@ -82,3 +82,22 @@ Atlikus šias užduotis eilės tvarka masyvas turėtų atrodyti taip:
 3.19. Gauti tik skaičius, kurie dalinasi iš 5, 7 arba iš 9.
 3.20. Gauti tik skaičius, kurie dalinasi iš 7, 8 arba iš 11.
 3.21. Gauti tik skaičius, kurie dalinasi iš 9, 12 arba iš 13.
+
+3.22. Gauti tik skaičius, kurie yra didesni už 100.
+3.23. Gauti tik skaičius, kurie yra didesni už 555.
+3.24. Gauti tik skaičius, kurie yra didesni arba lygūs 888.
+3.25. Gauti tik skaičius, kurie yra didesni arba lygūs 6789.
+3.26. Gauti tik skaičius, kurie yra mažesni už 50.
+3.27. Gauti tik skaičius, kurie yra mažesni už 1000.
+3.28. Gauti tik skaičius, kurie yra mažesni arba lygūs -1.
+3.29. Gauti tik skaičius, kurie yra mažesni arba lygūs -5564.
+3.30. Gauti tik skaičius, kurie yra mažesni už 1000 ir didesni už 500.
+3.31. Gauti tik skaičius, kurie yra mažesni už 100 ir didesni už 0.
+3.32. Gauti tik skaičius, kurie yra mažesni už 0 ir didesni už -50.
+3.33. Gauti tik skaičius, kurie yra mažesni arba lygūs 0 ir didesni už -100.
+3.34. Gauti tik skaičius, kurie yra didesni arba lygūs 0 ir mažesni už 55.
+3.35. Gauti tik skaičius, kurie yra didesni arba lygūs 444 ir mažesni arba lygūs 654.
+3.36. Gauti tik teigiamus skaičius, kurie dalinasi iš 2.
+3.37. Gauti tik teigiamus skaičius, kurie dalinasi iš 3.
+3.38. Gauti tik neigiamus skaičius, kurie dalinasi iš 4.
+3.39. Gauti tik neigiamus skaičius, kurie dalinasi iš 111.
