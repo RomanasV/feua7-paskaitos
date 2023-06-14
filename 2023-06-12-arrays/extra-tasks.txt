@@ -101,3 +101,15 @@ Atlikus šias užduotis eilės tvarka masyvas turėtų atrodyti taip:
 3.37. Gauti tik teigiamus skaičius, kurie dalinasi iš 3.
 3.38. Gauti tik neigiamus skaičius, kurie dalinasi iš 4.
 3.39. Gauti tik neigiamus skaičius, kurie dalinasi iš 111.
+
+3.40. Gauti tik skaičius, kurie yra didesni už 500 ir kurie dalinasi iš 2.
+3.41. Gauti tik skaičius, kurie yra didesni už 1000 ir kurie dalinasi iš 3.
+3.42. Gauti tik skaičius, kurie yra mažesni už 1000 ir kurie dalinasi iš 9.
+3.43. Gauti tik skaičius, kurie yra mažesni už 500 ir kurie dalinasi iš 2.
+3.44. Gauti tik skaičius, kurie yra didesni arba lygūs 33 ir kurie dalinasi iš 3.
+3.45. Gauti tik skaičius, kurie yra didesni arba lygūs 444 ir kurie dalinasi iš 12.
+3.46. Gauti tik skaičius, kurie yra mažesni arba lygūs 155 ir kurie dalinasi iš 5.
+3.47. Gauti tik skaičius, kurie yra mažesni arba lygūs -333 ir kurie dalinasi iš 9.
+3.48. Gauti tik skaičius, kurie yra didesni už 100, mažesni už 500 ir kurie dalinasi iš 5.
+3.49. Gauti tik skaičius, kurie yra didesni arba lygūs 888, mažesni už 1000 ir kurie dalinasi iš 2.
+3.50. Gauti tik skaičius, kurie yra mažesni arba lygūs 888, didesni arba lygūs -333, dalinasi iš 3 ir nėra nulis.
