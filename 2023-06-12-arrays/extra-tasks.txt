@@ -134,10 +134,9 @@ Atlikus šias užduotis eilės tvarka masyvas turėtų atrodyti taip:
 3.68. Gauti tik tekstus (string), kurie prasideda skaičiumi.
 3.69. Gauti tik tekstus (string), kurie prasideda raide s.
 3.70. Gauti tik tekstus (string), kurie prasideda raide o.
-3.70. Gauti tik tekstus (string), kurie baigiasi raide d.
-3.71. Gauti tik tekstus (string), kurie baigiasi raide s.
-3.72. Gauti tik tekstus (string), kurie turi daugiau nei 4 simbolius ir turi raidę o.
-3.73. Gauti tik tekstus (string), kurie turi daugiau arba lygiai 5 simbolius ir turi raidę a.
+3.71. Gauti tik tekstus (string), kurie baigiasi raide d.
+3.72. Gauti tik tekstus (string), kurie baigiasi raide s.
+3.73. Gauti tik tekstus (string), kurie turi daugiau nei 4 simbolius ir turi raidę o.
 3.74. Gauti tik tekstus (string), kurie turi daugiau arba lygiai 5 simbolius ir turi raidę a.
 3.75. Gauti tik tekstus (string), kurie turi porinį simbolių skaičių.
 3.76. Gauti tik tekstus (string), kurie turi neporinį simbolių skaičių ir turi raidę s.
