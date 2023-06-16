@@ -370,3 +370,28 @@ animals.map((animal) => {
 animals.forEach((animal) => {
   console.log('forEach ciklas: ' + animal);
 });
+
+
+let tasksArr = [1, 2, 'trys', 4, 'penki'];
+
+for (let i = 0; i < tasksArr.length; i++) {
+  // console.log(tasksArr[i]);
+  // console.log(typeof tasksArr[i]);
+  // console.log(typeof tasksArr[i] === 'number');
+
+  if (typeof tasksArr[i] === 'number') {
+    console.log(tasksArr[i]);
+  }
+}
+
+console.log('-----MAP-----');
+
+tasksArr.map((item) => {
+  // console.log(item);
+  // console.log(typeof item);
+  // console.log(typeof item === 'number');
+
+  if (typeof item === 'number') {
+    console.log(item);
+  }
+})
