@@ -149,6 +149,7 @@ console.log(nums);
 
 console.groupEnd();
 
+console.groupCollapsed('Tasks');
 
 // UZDUOTIS dirbant su pirkinių sąrašu (bent 7 pirkiniai):
 let shoppingList = ['vynuogės', 'alyvuogės', 'mandarinai', 'uobuoliai', 'pomidorai', 'šprotai', 'bananai', 'gervuogės'];
@@ -298,3 +299,74 @@ let filteredNums = originalNums.filter(num => num > 5 && num < 8 && num % 2 === 
 
 console.log(filteredNums);
 console.log(originalNums)
+
+console.groupEnd();
+
+
+// CIKLAI su MASYVAIS
+let numsArr = [1, 2, 4, 5, 7, 9, 10, 15, 100];
+
+console.log('Array: ', numsArr);
+console.log('Array length: ' + numsArr.length);
+
+// console.log(numsArr[0]);
+// console.log(numsArr[1]);
+// console.log(numsArr[2]);
+// console.log(numsArr[3]);
+// console.log(numsArr[5]);
+// console.log(numsArr[6]);
+// console.log(numsArr[7]);
+
+for (let i = 0; i < numsArr.length; i++) {
+  console.log('For ciklas: ' + numsArr[i]);
+}
+
+// map ciklas
+// numsArr.map((element, index, originalArr) => {
+//   console.log('Map ciklas: ' + element);
+//   console.log('Index: ' + index);
+//   console.log('Original array: ', originalArr);
+// });
+
+numsArr.map(element => {
+  console.log('Map ciklas: ' + element);
+});
+
+// forEach ciklas
+numsArr.forEach(element => {
+  console.log('forEach ciklas: ' + element);
+});
+
+
+let mapArray = numsArr.map(num => num * num).reverse();
+
+// let mapArray = numsArr.map(num => {
+//   return num * num
+// });
+
+console.log(numsArr);
+console.log(mapArray);
+
+let forEachArray = numsArr.forEach(num => {
+  return num * num;
+});
+console.log(forEachArray);
+
+// Skirtumai tarp forEach ir map metodų:
+// 1. map grąžina (return) naują masyvą, o forEach neturi return ir grąžina undefined.
+// 2. map galima chain'inti metodus, o forEach negalima.
+
+
+let animals = ['dog', 'cat', 'chicken', 'monkey'];
+
+for (let i = 0; i < animals.length; i++) {
+  console.log('for ciklas: ' + animals[i]);
+}
+
+animals.map((animal) => {
+  console.log('map ciklas: ' + animal);
+});
+
+animals.forEach((animal) => {
+  console.log('forEach ciklas: ' + animal);
+});
