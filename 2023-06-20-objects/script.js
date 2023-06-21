@@ -207,7 +207,7 @@ studentObj.setStudentActive()
 console.log(studentObj.yraAktyvus);
 
 studentObj.switchStudentActivity = function() {
-  
+  this.yraAktyvus = !this.yraAktyvus;
 }
 
 studentObj.addHobby = function(newHobby) {
