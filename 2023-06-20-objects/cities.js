@@ -136,10 +136,18 @@ cities.forEach((city) => {
     console.log(singleTouristAttraction);
   });
 
+  let cityItem = document.createElement('div');
+  cityItem.classList.add('city-item');
+  
+  let cityName = document.createElement('h2');
+  cityName.textContent = city.name
 
+  let cityDescription = document.createElement('p');
+  cityDescription.textContent = `${city.name} city is located in ${city.location.continent}, ${city.location.country} and has population of ${city.population} people.`;
+  
+  cityItem.append(cityName, cityDescription);
 
-
-
+  citiesList.append(cityItem);
 });
 
 
