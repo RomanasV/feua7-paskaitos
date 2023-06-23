@@ -115,39 +115,49 @@ console.log(cities);
 let citiesList = document.querySelector('#cities-list');
 
 cities.forEach((city) => {
-  // 1.6. Visus miestų masyvų narius išvesti į konsolę.
-  console.log(city);
-  // 1.6.1. Visų miestų pavadinimis išvesti į konsolę.
-  console.log(city.name);
-  // 1.6.2. Visų miestų populiaciją išvesti į konsolę.
-  console.log(city.population);
+    let cityItem = document.createElement('div');
+    cityItem.classList.add('city-item');
 
-  console.log(city.location);
-  // 1.6.3. Visų miestų žemyną išvesti į konsolę.
-  console.log(city.location.continent);
-  // 1.6.4. Visų miestų šalį išvesti į konsolę.
-  console.log(city.location.country);
-  // 1.6.5. Į konsolę išvesti ar miestas yra sostinė, ar ne.
-  console.log(city.isCapital);
-  // 1.6.6. Į konsolę išvesti visas miesto lankytinas vietas.
-  console.log(city.touristAttractions);
+    citiesList.append(cityItem);
 
-  city.touristAttractions.forEach((singleTouristAttraction) => {
-    console.log(singleTouristAttraction);
-  });
+    let capitalTitle = '';
+    let capitalDescription = '';
 
-  let cityItem = document.createElement('div');
-  cityItem.classList.add('city-item');
-  
-  let cityName = document.createElement('h2');
-  cityName.textContent = city.name
+    if (city.isCapital) {
+        capitalTitle = ' (capital)';
+        capitalDescription = ` ${city.name} is the capital of ${city.location.country}.`;
+        cityItem.classList.add('capital');
+    }
 
-  let cityDescription = document.createElement('p');
-  cityDescription.textContent = `${city.name} city is located in ${city.location.continent}, ${city.location.country} and has population of ${city.population} people.`;
-  
-  cityItem.append(cityName, cityDescription);
+    let cityName = document.createElement('h2');
+    cityName.textContent = city.name + capitalTitle;
 
-  citiesList.append(cityItem);
+    let cityDescription = document.createElement('p');
+    cityDescription.textContent = `${city.name} city is located in ${city.location.continent}, ${city.location.country} and has population of ${city.population} people.${capitalDescription}`;
+
+    cityItem.append(cityName, cityDescription);
+
+    if (city.touristAttractions.length === 0) { 
+        return;
+    }
+
+    let touristAttractionsTitle = document.createElement('h3');
+    touristAttractionsTitle.textContent = `Main Tourist attraction of ${city.name} is:`;
+
+    if (city.touristAttractions.length > 1) {
+        touristAttractionsTitle.textContent = `Main Tourist attractions of ${city.name} are:`;
+    }
+    
+    let touristAttractionList = document.createElement('ul');
+    
+    city.touristAttractions.forEach((singleTouristAttraction) => {
+        let touristAttractionItem = document.createElement('li');
+        touristAttractionItem.textContent = singleTouristAttraction;
+        
+        touristAttractionList.append(touristAttractionItem);
+    });
+    
+    cityItem.append(touristAttractionsTitle, touristAttractionList);
 });
 
 
