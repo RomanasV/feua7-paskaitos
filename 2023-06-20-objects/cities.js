@@ -115,6 +115,18 @@ console.log(cities);
 let citiesList = document.querySelector('#cities-list');
 
 cities.forEach((city) => {
+    // let name = city.name;
+    // let population = city.population;
+    // let isCapital = city.isCapital;
+    // let touristAttractions = city.touristAttractions;
+
+    let { name, population, isCapital, touristAttractions } = city;
+
+    // let country = city.location.country;
+    // let continent = city.location.continent;
+
+    let { country, continent } = city.location;
+
     let cityItem = document.createElement('div');
     cityItem.classList.add('city-item');
 
@@ -123,34 +135,34 @@ cities.forEach((city) => {
     let capitalTitle = '';
     let capitalDescription = '';
 
-    if (city.isCapital) {
+    if (isCapital) {
         capitalTitle = ' (capital)';
-        capitalDescription = ` ${city.name} is the capital of ${city.location.country}.`;
+        capitalDescription = ` ${name} is the capital of ${country}.`;
         cityItem.classList.add('capital');
     }
 
     let cityName = document.createElement('h2');
-    cityName.textContent = city.name + capitalTitle;
+    cityName.textContent = name + capitalTitle;
 
     let cityDescription = document.createElement('p');
-    cityDescription.textContent = `${city.name} city is located in ${city.location.continent}, ${city.location.country} and has population of ${city.population} people.${capitalDescription}`;
+    cityDescription.textContent = `${name} city is located in ${continent}, ${country} and has population of ${population} people.${capitalDescription}`;
 
     cityItem.append(cityName, cityDescription);
 
-    if (city.touristAttractions.length === 0) { 
+    if (touristAttractions.length === 0) { 
         return;
     }
 
     let touristAttractionsTitle = document.createElement('h3');
-    touristAttractionsTitle.textContent = `Main Tourist attraction of ${city.name} is:`;
+    touristAttractionsTitle.textContent = `Main Tourist attraction of ${name} is:`;
 
-    if (city.touristAttractions.length > 1) {
-        touristAttractionsTitle.textContent = `Main Tourist attractions of ${city.name} are:`;
+    if (touristAttractions.length > 1) {
+        touristAttractionsTitle.textContent = `Main Tourist attractions of ${name} are:`;
     }
     
     let touristAttractionList = document.createElement('ul');
     
-    city.touristAttractions.forEach((singleTouristAttraction) => {
+    touristAttractions.forEach((singleTouristAttraction) => {
         let touristAttractionItem = document.createElement('li');
         touristAttractionItem.textContent = singleTouristAttraction;
         
