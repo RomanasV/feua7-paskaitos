@@ -110,8 +110,9 @@ let cities = [
   },
 ];
 
+let citiesList = document.querySelector('#cities-list');
+
 function renderCities() {
-    let citiesList = document.querySelector('#cities-list');
 
     cities.forEach((city) => {
         // let name = city.name;
@@ -208,12 +209,59 @@ function styleCities() {
     })
 
     //  5.2. Pakeisti kas antro miesto fono spalvą.
+    let allCities = document.querySelectorAll('.city-item');
+
+    // allCities.forEach((city, index) => {
+    //     if (index % 2 === 0) {
+    //         city.style.backgroundColor = '#f0f0f0';
+    //     }
+    // })
+
+    // for (let i = 0; i < allCities.length; i++) {
+    //     let city = allCities[i];
+
+    //     if (i % 2 === 0) {
+    //         city.style.backgroundColor = '#f0f0f0';
+    //     }
+    // }
+
+    // for (let i = 0; i < allCities.length; i+=2) {
+    //     let city = allCities[i];
+    //     city.style.backgroundColor = '#f0f0f0';
+    // }
+
+    let oddCities = document.querySelectorAll('.city-item:nth-of-type(odd)');
+
+    oddCities.forEach(city => {
+        city.style.backgroundColor = '#f0f0f0';
+    })
+    
+    // 6. Miestų plotis turi būti 50%.
+    // 6.1. Jeigu miestų skaičius nėra porinis, tai paskutinio miesto plotis turi būti 100%.
+
+    // citiesList.style.display = 'flex';
+    // citiesList.style.flexWrap = 'wrap';
+    // citiesList.style.gap = '20px';
+
+    citiesList.style = `
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    `;
+
+    allCities.forEach((city, index) => {
+        city.style.padding = '20px';
+        city.style.boxSizing = 'border-box';
+        
+        if (index === allCities.length - 1 && index % 2 === 0) {
+            city.style.width = '100%';
+        } else {
+            city.style.width = 'calc((100% - 20px) / 2)';
+        }
+    });
     
     //  5.3. Pakeisti visų lankytinų vietų sąrašo pirmo nario spalvą į žalią.
     //  5.4. Pakeisti visų lankytinų vietų sąrašo paskutinių narių spalvą į raudoną, jeigu narių (lankytinų vietų) yra daugiau nei 3.
-
-    // 6. Miestų plotis turi būti 50%.
-    // 6.1. Jeigu miestų skaičius nėra porinis, tai paskutinio miesto plotis turi būti 100%.
 }
 
 renderCities();
