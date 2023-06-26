@@ -110,90 +110,111 @@ let cities = [
   },
 ];
 
-console.log(cities);
+function renderCities() {
+    let citiesList = document.querySelector('#cities-list');
 
-let citiesList = document.querySelector('#cities-list');
-
-cities.forEach((city) => {
-    // let name = city.name;
-    // let population = city.population;
-    // let isCapital = city.isCapital;
-    // let touristAttractions = city.touristAttractions;
-
-    let { name, population, isCapital, touristAttractions } = city;
-
-    // let country = city.location.country;
-    // let continent = city.location.continent;
-
-    let { country, continent } = city.location;
-
-    let cityItem = document.createElement('div');
-    cityItem.classList.add('city-item');
-
-    citiesList.append(cityItem);
-
-    let capitalTitle = '';
-    let capitalDescription = '';
-
-    if (isCapital) {
-        capitalTitle = ' (capital)';
-        capitalDescription = ` ${name} is the capital of ${country}.`;
-        cityItem.classList.add('capital');
-    }
-
-    let cityName = document.createElement('h2');
-    cityName.textContent = name + capitalTitle;
-
-    let cityDescription = document.createElement('p');
-    cityDescription.textContent = `${name} city is located in ${continent}, ${country} and has population of ${population} people.${capitalDescription}`;
-
-    cityItem.append(cityName, cityDescription);
-
-    if (touristAttractions.length === 0) { 
-        return;
-    }
-
-    let touristAttractionsTitle = document.createElement('h3');
-    touristAttractionsTitle.textContent = `Main Tourist attraction of ${name} is:`;
-
-    if (touristAttractions.length > 1) {
-        touristAttractionsTitle.textContent = `Main Tourist attractions of ${name} are:`;
-    }
+    cities.forEach((city) => {
+        // let name = city.name;
+        // let population = city.population;
+        // let isCapital = city.isCapital;
+        // let touristAttractions = city.touristAttractions;
     
-    let touristAttractionList = document.createElement('ul');
+        let { name, population, isCapital, touristAttractions } = city;
     
-    touristAttractions.forEach((singleTouristAttraction) => {
-        let touristAttractionItem = document.createElement('li');
-        touristAttractionItem.textContent = singleTouristAttraction;
+        // let country = city.location.country;
+        // let continent = city.location.continent;
+    
+        let { country, continent } = city.location;
+    
+        let cityItem = document.createElement('div');
+        cityItem.classList.add('city-item');
+    
+        citiesList.append(cityItem);
+    
+        let capitalTitle = '';
+        let capitalDescription = '';
+    
+        if (isCapital) {
+            capitalTitle = ' (capital)';
+            capitalDescription = ` ${name} is the capital of ${country}.`;
+            cityItem.classList.add('capital');
+        }
+    
+        let cityName = document.createElement('h2');
+        cityName.textContent = name + capitalTitle;
+    
+        let cityDescription = document.createElement('p');
+        cityDescription.textContent = `${name} city is located in ${continent}, ${country} and has population of ${population} people.${capitalDescription}`;
+    
+        cityItem.append(cityName, cityDescription);
+    
+        if (touristAttractions.length === 0) { 
+            return;
+        }
+    
+        let touristAttractionsTitle = document.createElement('h3');
+        touristAttractionsTitle.textContent = `Main Tourist attraction of ${name} is:`;
+    
+        if (touristAttractions.length > 1) {
+            touristAttractionsTitle.textContent = `Main Tourist attractions of ${name} are:`;
+        }
         
-        touristAttractionList.append(touristAttractionItem);
+        let touristAttractionList = document.createElement('ul');
+        
+        touristAttractions.forEach((singleTouristAttraction) => {
+            let touristAttractionItem = document.createElement('li');
+            touristAttractionItem.textContent = singleTouristAttraction;
+            
+            touristAttractionList.append(touristAttractionItem);
+        });
+        
+        cityItem.append(touristAttractionsTitle, touristAttractionList);
     });
     
-    cityItem.append(touristAttractionsTitle, touristAttractionList);
-});
+    
+    // cities.map((city) => {
+    //   console.log(city);
+    //   console.log(city.name);
+    //   console.log(city.population);
+    
+    //   console.log(city.location);
+    //   console.log(city.location.continent);
+    //   console.log(city.location.country);
+    //   console.log(city.isCapital);
+    //   console.log(city.touristAttractions);
+    // });
+    
+    // for (let i = 0; i < cities.length; i++) {
+    //   console.log(cities[i]);
+    
+    //   console.log(cities[i].name);
+    //   console.log(cities[i].population);
+    
+    //   console.log(cities[i].location);
+    //   console.log(cities[i].location.continent);
+    //   console.log(cities[i].location.country);
+    //   console.log(cities[i].isCapital);
+    //   console.log(cities[i].touristAttractions);
+    // }
+}
 
+function styleCities() {
+    // 5. Naudojant tik JavaScript:
+    //  5.1. Pakeisti visų sostinių teksto spalvą.
+    let cityTitles = document.querySelectorAll('.capital h2');
 
-// cities.map((city) => {
-//   console.log(city);
-//   console.log(city.name);
-//   console.log(city.population);
+    cityTitles.forEach(cityTitle => {
+        cityTitle.style.color = 'green';
+    })
 
-//   console.log(city.location);
-//   console.log(city.location.continent);
-//   console.log(city.location.country);
-//   console.log(city.isCapital);
-//   console.log(city.touristAttractions);
-// });
+    //  5.2. Pakeisti kas antro miesto fono spalvą.
+    
+    //  5.3. Pakeisti visų lankytinų vietų sąrašo pirmo nario spalvą į žalią.
+    //  5.4. Pakeisti visų lankytinų vietų sąrašo paskutinių narių spalvą į raudoną, jeigu narių (lankytinų vietų) yra daugiau nei 3.
 
-// for (let i = 0; i < cities.length; i++) {
-//   console.log(cities[i]);
+    // 6. Miestų plotis turi būti 50%.
+    // 6.1. Jeigu miestų skaičius nėra porinis, tai paskutinio miesto plotis turi būti 100%.
+}
 
-//   console.log(cities[i].name);
-//   console.log(cities[i].population);
-
-//   console.log(cities[i].location);
-//   console.log(cities[i].location.continent);
-//   console.log(cities[i].location.country);
-//   console.log(cities[i].isCapital);
-//   console.log(cities[i].touristAttractions);
-// }
+renderCities();
+styleCities();
