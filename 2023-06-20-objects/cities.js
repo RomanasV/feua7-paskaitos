@@ -15,7 +15,7 @@ let cities = [
           continent: 'Europe',
           country: 'Lietuva',
       },
-      touristAttractions: ['Gedimino pilies bokstas', 'Vilniaus katedra'],
+      touristAttractions: ['Gedimino pilies bokstas', 'Vilniaus katedra', 'Vilniaus katedra', 'Vilniaus katedra', 'Vilniaus katedra', 'Vilniaus katedra'],
       isCapital: true,
   },
   {
@@ -262,6 +262,37 @@ function styleCities() {
     
     //  5.3. Pakeisti visų lankytinų vietų sąrašo pirmo nario spalvą į žalią.
     //  5.4. Pakeisti visų lankytinų vietų sąrašo paskutinių narių spalvą į raudoną, jeigu narių (lankytinų vietų) yra daugiau nei 3.
+
+    // let firstTouristAttractions = document.querySelectorAll('.city-item li:first-of-type');
+
+    // firstTouristAttractions.forEach(touristAttraction => {
+    //     touristAttraction.style.color = 'green';
+    // })
+
+    // let lastTouristAttractions = document.querySelectorAll('li:nth-of-type(1n + 4)');
+    // lastTouristAttractions.forEach(touristAttraction => {
+    //     touristAttraction.style.color = 'red';
+    // })
+
+    let touristAttractionLists = document.querySelectorAll('.city-item ul');
+
+    touristAttractionLists.forEach(list => {
+        let items = list.querySelectorAll('li');
+
+        items.forEach((item, index) => {
+            let color = 'black';
+
+            if (index === 0) {
+                color = 'green';
+            } else if (index > 2) {
+                color = 'red';
+            } else {
+                color = 'orange';
+            }
+
+            item.style.color = color;
+        });
+    });
 }
 
 renderCities();
