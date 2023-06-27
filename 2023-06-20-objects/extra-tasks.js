@@ -128,83 +128,193 @@ const posts = [
 
 // 7. Naudojant posts masyvą, atlikti žemiau nurodytas užduotis ir atsakymus išvesti į konsolę. Visoms užduotis kurti funkciją ir jai, kaip parametrą, paduoti nurodytą masyvą.
 // 7.1. Gauti pirmo masyvo nario reikšmę.
-
-function task71(data) {
-  // console.log(data[0]);
-  console.log(data.at(0));
+function task71(postsData) {
+  // console.log(postsData[0]);
+  console.log(postsData.at(0));
 }
 
-task71(posts);
+// task71(posts);
 
 // 7.2. Gauti paskutinio masyvo nario reikšmę.
-function task72(data) {
-  // console.log(data[data.length - 1]);
-  console.log(data.at(-1));
+function task72(postsData) {
+  // console.log(postsData[postsData.length - 1]);
+  console.log(postsData.at(-1));
 }
 
-task72(posts);
+// task72(posts);
 
 // 7.3. Gauti 15 masyvo nario reikšmę.
-function task73(data) {
-  console.log(data[14]);
+function task73(postsData) {
+  console.log(postsData);
+  // console.log(postsData[14]);
+  console.log(postsData.at(14));
 }
 
-task73(posts);
+// task73(posts);
 
 // 7.4. Gauti 13 masyvo nario reikšmę skaičiuojant nuo galo.
-function task74(data) {
-  console.log(data.at(-13));
+function task74(postsData, index) {
+  console.log(postsData);
+
+  // console.log(postsData[postsData.length - 14]);
+  console.log(postsData.at(index));
 }
 
-task74(posts);
+// task74(posts, -13);
 
-// 7.5. Gauti vidurinio masyvo nario reikšmę.
+// 7.5. Gauti vidurinio masyvo naio reikšmę.
+function task75(postsData) {
+  let middleIndex = Math.floor(postsData.length / 2);
+  let middlePost = postsData[middleIndex];
+  console.log(middlePost);
+}
+
+// task75(posts);
+
 // 7.6. Gauti pirmų keturių masyvo narių reikšmes.
+function task76(postsData) {
+  console.log(postsData.slice(0, 4));
+}
+
+// task76(posts);
+
 // 7.7. Gauti paskutinių penkių masyvo narių reikšmes.
+function task77(postsData) {
+  console.log(postsData.slice(-5));
+}
+
+// task77(posts);
+
 // 7.8. Gauti nuo penkto iki penkiolikto masyvo narių reikšmes.
+function task77(postsData) {
+  console.log(postsData);
+  console.log(postsData.slice(4, 15));
+}
+
+// task77(posts);
+
 // 7.9. Gauti kas antro masyvo nario reikšmes.
+function task78(postsData) {
+  console.log(postsData);
+  // postsData.map((post, index) => {
+  //   if (index % 2 === 0) {
+  //     console.log(post);
+  //   }
+  // })
+
+  // for (let i = 0; i < postsData.length; i++) {
+  //   if (i % 2 === 0) {
+  //     console.log(postsData[i]);
+  //   }
+  // }
+
+  for (let i = 0; i < postsData.length; i+=2) {
+    console.log(postsData[i]);
+  }
+}
+
+// task78(posts);
+
 // 7.10. Gauti pirmo ir paskutinio masyvo narių reikšmes.
+function task710(postsData) {
+  // let firstPost = postsData[0];
+  // let lastPost = postsData.at(-1);
+  // console.log([firstPost, lastPost]);
 
+  task71(postsData);
+  task72(postsData);
+}
 
+// task710(posts);
 
 // 7.11. Gauti pirmą masyvo narį ir į konsolę išvesti jo property "title" reikšmę.
-function task711(data) {
-  let firstPost = data[0];
-  console.log(firstPost.title);
+function task711(postsData) {
+  console.log(postsData[0].title);
 }
 
-task711(posts);
+// task711(posts);
 
 // 7.12. Gauti antrą masyvo narį ir į konsolę išvesti jo property "body" reikšmę.
-function task712(data) {
-  let post = data[1];
-  console.log(post.body);
+function task712(postsData) {
+  console.log(postsData[1].body);
 }
 
-task712(posts);
+// task712(posts);
 
 // 7.13. Gauti trečią masyvo narį ir į konsolę išvesti jo property "title" ir "body" reikšmes tokiu formatu: Post title is: 'post title' and the content is: 'post content'.
-function task713(data) {
-  let post = data[2];
-  let postTitle = post.title;
-  let postBody = post.body;
-  let output = `Post title is: '${postTitle}' and the content is: '${postBody}'.`;
-  console.log(output);
+function task713(postsData) {
+  let post = postsData[2];
+  let title = post.title;
+  let body = post.body;
+
+  let output = `Post title is: '${title}' and the content is: '${body}'.`;
+  console.log(output)
 }
 
-task713(posts);
+// task713(posts);
 
 // 7.14. Išvesti visus masyvo narius į konsolę.
+function task714(postsData) {
+  postsData.map(post => {
+    console.log(post);
+  })
+}
+
+// task714(posts);
+
 // 7.15. Išvesti visų masyvo narių property "title" į konsolę.
-function task715(data) {
-  data.forEach((post) => {
+function task715(postsData) {
+  postsData.map(post => {
     console.log(post.title);
   })
 }
 
-task715(posts);
+// task715(posts);
 
 // 7.16. Išvesti visų masyvo narių property "body" į konsolę.
+function task716(postsData) {
+  postsData.map(post => {
+    console.log(post.body);
+  })
+}
+
+// task716(posts);
+
 // 7.17. Išvesti visų masyvo narių property "title" ir "body" į konsolę tokiu formatu: Title: "post title". Content: "post content".
+function task717(postsData) {
+  postsData.map(post => {
+    let output = `Title: "${post.title}". Content: "${post.body}".`;
+    console.log(output);
+  })
+}
+
+// task717(posts);
+
 // 7.18. Išvesti pirmų keturių masyvo narių property "title" ir "body" į konsolę tokiu formatu: Title: "post title". Content: "post content".
+function task718(postsData) {
+  let newPosts = postsData.slice(0, 4);
+
+  // newPosts.map(post => {
+  //   let output = `Title: "${post.title}". Content: "${post.body}".`;
+  //   console.log(output);
+  // })
+
+  task717(newPosts);
+}
+
+// task718(posts);
+
 // 7.19. Išvesti paskutinių septynių masyvo narių property "title" ir "body" į konsolę tokiu formatu: Title: "post title". Content: "post content".
+
+function task719(postsData) {
+  let newPosts = postsData.slice(-7);
+
+  // newPosts.map(post => {
+  //   let output = `Title: "${post.title}". Content: "${post.body}".`;
+  //   console.log(output);
+  // })
+
+  task717(newPosts);
+}
+
+// task719(posts);
