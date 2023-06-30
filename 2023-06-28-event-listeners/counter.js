@@ -1,10 +1,4 @@
-// Užduotis:
-// 1. Sukurti HTML elementą, kurio id „numbers"
 let numbers = document.querySelector('#numbers');
-
-// 2. JavaScript pagalba šio elemento viduje sukurti: h3 elementą ir du mygtukų elementus
-// 3. h3 elemento tekstas turėtų būti „5"
-// 4. Mygtukų tekstas turėtų būti „+" ir „-"
 
 let numberDisplay = document.createElement('h3');
 let plus5Button = document.createElement('button');
@@ -16,8 +10,7 @@ let minus5Button = document.createElement('button');
 let resetButton = document.createElement('button');
 let input = document.createElement('input');
 
-let initialNum = 1;
-
+let initialNum = 5;
 let num = initialNum;
 
 numberDisplay.textContent = num;
@@ -34,91 +27,25 @@ input.max = 10;
 input.min = 1;
 input.value = num;
 
-checkData();
-changeColor();
-
 numbers.append(numberDisplay, input, minus5Button, minus2Button, minusButton, plusButton, plus2Button, plus5Button, resetButton);
 
-// 5. Sukurti „click" (paspaudimo) event listener'ius abiems mygtukams.
-// 6. „-" mygtuko event listeneris turėtų iškviesti funkciją, kuri sumažina skaičių h3 elemente, o „+" mygtuko paspaudimas turėtų skaičių padidinti
+checkData();
 
-
-plusButton.addEventListener('click', () => {
-  // num = num + 1;
-  num++;
-  numberDisplay.textContent = num;
-  input.value = num;
-
-  checkData();
-
-  changeColor();
-})
-
-plus2Button.addEventListener('click', () => {
-  num += 2;
-  numberDisplay.textContent = num;
-  input.value = num;
-
-  checkData();
-
-  changeColor();
-})
-
-plus5Button.addEventListener('click', () => {
-  num += 5;
-  numberDisplay.textContent = num;
-  input.value = num;
-
-  checkData();
-
-  changeColor();
-})
-
-minusButton.addEventListener('click', () => {
-  // num = num - 1;
-  num--;
-  numberDisplay.textContent = num;
-  input.value = num;
-
-  checkData();
-
-  changeColor();
-})
-
-minus2Button.addEventListener('click', () => {
-  num -= 2;
-  numberDisplay.textContent = num;
-  input.value = num;
-
-  checkData();
-
-  changeColor();
-})
-
-minus5Button.addEventListener('click', () => {
-  num -= 5;
-  numberDisplay.textContent = num;
-  input.value = num;
-
-  checkData();
-
-  changeColor();
-})
+plusButton.addEventListener('click', () => checkData(1));
+plus2Button.addEventListener('click', () => checkData(2));
+plus5Button.addEventListener('click', () => checkData(5));
+minusButton.addEventListener('click', () => checkData(-1));
+minus2Button.addEventListener('click', () => checkData(-2));
+minus5Button.addEventListener('click', () => checkData(-5));
 
 resetButton.addEventListener('click', () => {
   num = initialNum;
-  numberDisplay.textContent = num;
-  input.value = num;
   checkData();
-  changeColor();
 })
 
 input.addEventListener('input', () => {
-  num = input.value;
-  numberDisplay.textContent = num;
+  num = Number(input.value);
   checkData();
-
-  changeColor();
 })
 
 function changeColor() {
@@ -129,7 +56,11 @@ function changeColor() {
   }
 }
 
-function checkData() {
+function checkData(nth = 0) {
+  num += nth;
+  numberDisplay.textContent = num;
+  input.value = num;
+
   if (num > 9) {
     plusButton.setAttribute('disabled', true);
   } else {
@@ -165,4 +96,6 @@ function checkData() {
   } else {
     minus5Button.removeAttribute('disabled');
   }
+
+  changeColor();
 }
