@@ -24,3 +24,7 @@ Užduotis:
 14. Sukurti naują elementą (ul) ir jį pridėti į „numbers" elemento pabaigą.
 14.1. Sukurti naują mygtuką, kurio teksta būtų „Įrašyti balą".
 14.2. Paspaudus šį mygtuką, reikia paimti reikšmę iš h3 elemento ir sukurti naują li elementą bei jį prepend'inti prie ul elemento.
+
+15. Išsaugotas balas li elemente turėtų būti tos pačios spalvos, kaip ir h3 elemente.
+16. Į li elementą pridėti mygtuką, kurį paspaudus ištrinamas tik tas balas, kurio mygtukas buvo paspaustas.
+17. Sukurti mygtuką „Ištrinti visus balus" ir jį paspaudus ištrinti visus li elementus su išsaugotais balais.

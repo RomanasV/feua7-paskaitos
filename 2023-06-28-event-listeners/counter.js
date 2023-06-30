@@ -8,7 +8,11 @@ let minusButton = document.createElement('button');
 let minus2Button = document.createElement('button');
 let minus5Button = document.createElement('button');
 let resetButton = document.createElement('button');
+let addGradeButton = document.createElement('button');
 let input = document.createElement('input');
+let gradesTitle = document.createElement('h4');
+let removeAllGradesButton = document.createElement('button');
+let gradesList = document.createElement('ul');
 
 let initialNum = 5;
 let num = initialNum;
@@ -21,13 +25,16 @@ minusButton.textContent = '-';
 minus2Button.textContent = '-2';
 minus5Button.textContent = '-5';
 resetButton.textContent = 'Reset';
+addGradeButton.textContent = 'Add Grade';
+gradesTitle.textContent = 'Grades:';
+removeAllGradesButton.textContent = 'Remove All Grades';
 
 input.type = 'number';
 input.max = 10;
 input.min = 1;
 input.value = num;
 
-numbers.append(numberDisplay, input, minus5Button, minus2Button, minusButton, plusButton, plus2Button, plus5Button, resetButton);
+numbers.append(numberDisplay, input, minus5Button, minus2Button, minusButton, plusButton, plus2Button, plus5Button, resetButton, addGradeButton, gradesTitle, removeAllGradesButton, gradesList);
 
 checkData();
 
@@ -46,6 +53,36 @@ resetButton.addEventListener('click', () => {
 input.addEventListener('input', () => {
   num = Number(input.value);
   checkData();
+})
+
+addGradeButton.addEventListener('click', () => {
+  let gradeItem = document.createElement('li');
+  gradeItem.classList.add('grade-item');
+  gradeItem.textContent = num;
+
+  gradeItem.style.color = numberDisplay.style.color;
+
+  let gradeRemoveButton = document.createElement('button');
+  gradeRemoveButton.textContent = 'x';
+
+  gradeRemoveButton.addEventListener('click', () => {
+    gradeItem.remove();
+  })
+
+  gradeItem.append(gradeRemoveButton);
+
+  gradesList.prepend(gradeItem);
+
+  num = initialNum;
+  checkData();
+})
+
+removeAllGradesButton.addEventListener('click', () => {
+  let allGrades = document.querySelectorAll('li.grade-item');
+
+  allGrades.forEach(gradeItem => {
+    gradeItem.remove();
+  })
 })
 
 function changeColor() {
