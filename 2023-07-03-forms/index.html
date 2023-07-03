@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+<body>
+  <!-- <form action="/form-success.html"> -->
+
+  <form id="test-form">
+    <div class="form-control">
+      <label for="name">Name:</label>
+      <input type="text" name="form-name" id="name" placeholder="Enter your name" value="John">
+    </div>
+
+    <div class="form-control">
+      <label for="age">Age:</label>
+      <input type="number" name="form-age" id="age" min="1" max="100" step="0.1" value="30">
+    </div>
+
+    <div class="form-control">
+      <label for="password">Password:</label>
+      <input type="password" name="form-password" id="password" placeholder="Password">
+    </div>
+
+    <div class="form-control">
+      <label for="email">Email:</label>
+      <input type="email" name="form-email" id="email">
+    </div>
+
+    <div class="form-control">
+      <label for="color">Color</label>
+      <input type="color" name="form-color" id="color">
+    </div>
+
+    <div class="form-control">
+      <label for="test">Test:</label>
+      <input type="range" name="form-test" id="test">
+    </div>
+
+    <div class="form-control">
+      <input type="checkbox" name="form-terms-and-conditions" id="terms-and-conditions">
+      <label for="terms-and-conditions">Agree with terms and conditions:</label>
+    </div>
+
+    <fieldset>
+      <legend>Cities:</legend>
+
+      <div class="form-control">
+        <input type="radio" name="city" id="city-1" value="Vilnius" checked>
+        <label for="city-1">Vilnius</label>
+      </div>
+
+      <div class="form-control">
+        <input type="radio" name="city" id="city-2" value="Kaunas">
+        <label for="city-2">Kaunas</label>
+      </div>
+      
+      <div class="form-control">
+        <input type="radio" name="city" id="city-3" value="Klaipėda">
+        <label for="city-3">Klaipėda</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Places to visit:</legend>
+
+      <div class="form-control">
+        <input type="checkbox" name="place" id="place-1" value="Vilnius" checked>
+        <label for="place-1">Vilnius</label>
+      </div>
+
+      <div class="form-control">
+        <input type="checkbox" name="place" id="place-2" value="Kaunas">
+        <label for="place-2">Kaunas</label>
+      </div>
+
+      <div class="form-control">
+        <input type="checkbox" name="place" id="place-3" value="Klaipėda">
+        <label for="place-3">Klaipėda</label>
+      </div>
+    </fieldset>
+
+
+    <!-- <input type="submit" value="Submit"> -->
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="list"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
