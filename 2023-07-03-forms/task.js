@@ -55,10 +55,10 @@ function init() {
     studentAgeElement.textContent = `Age: ${ageValue}`;
 
     const studentPhoneElement = document.createElement('li');
-    studentPhoneElement.textContent = `Phone: ${phoneValue}`;
+    studentPhoneElement.textContent = `Phone: ****`;
 
     const studentEmailElement = document.createElement('li');
-    studentEmailElement.textContent = `Email: ${emailValue}`;
+    studentEmailElement.textContent = `Email: ****`;
 
     const studentITKnowledgeElement = document.createElement('li');
     studentITKnowledgeElement.textContent = `IT Knowledge: ${itKnowledgeValue}`;
@@ -75,7 +75,26 @@ function init() {
       studentInfoList.append(studentInterestElement);
     }
 
-    studentItem.append(studentNameElement, studentInfoList);
+    const privateInfoButton = document.createElement('button');
+    privateInfoButton.textContent = 'Show Private Info';
+
+    let privateInfoHidden = true;
+
+    privateInfoButton.addEventListener('click', () => {
+      privateInfoHidden = !privateInfoHidden;
+
+      if (privateInfoHidden) {
+        studentPhoneElement.textContent = `Phone: ****`;
+        studentEmailElement.textContent = `Email: ****`;
+        privateInfoButton.textContent = 'Show Private Info';
+      } else {
+        studentPhoneElement.textContent = `Phone: ${phoneValue}`;
+        studentEmailElement.textContent = `Email: ${emailValue}`;
+        privateInfoButton.textContent = 'Hide Private Info';
+      }
+    })
+
+    studentItem.append(studentNameElement, studentInfoList, privateInfoButton);
     studentsList.prepend(studentItem);
   })
 }
