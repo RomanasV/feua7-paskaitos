@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- PIRMA DALIS:
+  Sukurti kontaktų formą.
+  1. Kontaktų formoje turi būti šie laukeliai:
+    1. Tekstinis laukelis vardui (privalomas).
+    2. Tekstinis laukelis pavardei (privalomas).
+    3. Skaičiaus laukelis amžiui (privalomas).
+    4. Laukelis įvesti telefono numerį (neprivalomas).
+    5. Laukelis įvesti el. paštą (privalomas).
+    6. Range tipo laukelis, kuris skirtas įvertinti savo IT žinias nuo 1 iki 10. Galimas vertinimas tik sveikiems skaičiams.
+    7. Radio tipo laukeliai, kuriuose pasirenkamas grupės numeris. Turi būti galimybė pasirinkti grupes nuo FEU 1gr. iki FEU 5gr.
+    8. Šalia kiekvieno įvesties (input) elemento, pridėti label elementą, kuris žymi laukelio pavadinimą. -->
+
+  <form id="student-form">
+    <div class="form-control">
+      <label for="name">Name:</label>
+      <input type="text" name="person-name" id="name" required value="John">
+    </div>
+
+    <div class="form-control">
+      <label for="surname">Surname:</label>
+      <input type="text" name="person-surname" id="surname" required value="Doe">
+    </div>
+
+    <div class="form-control">
+      <label for="age">Age:</label>
+      <input type="number" name="person-age" id="age" required value="30">
+    </div>
+
+    <div class="form-control">
+      <label for="phone">Phone:</label>
+      <input type="tel" name="person-phone" id="phone" value="+3706484151">
+    </div>
+
+    <div class="form-control">
+      <label for="email">Email:</label>
+      <input type="email" name="person-email" id="email" required value="info@email.com">
+    </div>
+
+    <div class="form-control">
+      <label for="it-knowledge">IT Knowledge:</label>
+      <input type="range" name="person-it-knowledge" id="it-knowledge" min="1" max="10" required value="5">
+
+      <output id="it-knowledge-output"></output>
+    </div>
+
+    <fieldset>
+      <legend>Group:</legend>
+
+      <div class="fieldset-group">
+        <div class="form-control">
+          <input type="radio" name="student-group" id="group-1" value="FEU 1" checked>
+          <label for="group-1">FEU 1gr</label>
+        </div>
+
+        <div class="form-control">
+          <input type="radio" name="student-group" id="group-2" value="FEU 2">
+          <label for="group-2">FEU 2gr</label>
+        </div>
+
+        <div class="form-control">
+          <input type="radio" name="student-group" id="group-3" value="FEU 3">
+          <label for="group-3">FEU 3gr</label>
+        </div>
+
+        <div class="form-control">
+          <input type="radio" name="student-group" id="group-4" value="FEU 4">
+          <label for="group-4">FEU 4gr</label>
+        </div>
+
+        <div class="form-control">
+          <input type="radio" name="student-group" id="group-5" value="FEU 5">
+          <label for="group-5">FEU 5gr</label>
+        </div>
+      </div>
+    </fieldset>
+
+    
+    <fieldset>
+      <legend>Interests:</legend>
+
+      <div class="fieldset-group">
+        <div class="form-control">
+          <input type="checkbox" name="student-interest" id="interest-1" value="JavaScript">
+          <label for="interest-1">JavaScript</label>
+        </div>
+
+        <div class="form-control">
+          <input type="checkbox" name="student-interest" id="interest-2" value="C++">
+          <label for="interest-2">C++</label>
+        </div>
+
+        <div class="form-control">
+          <input type="checkbox" name="student-interest" id="interest-3" value="PHP">
+          <label for="interest-3">PHP</label>
+        </div>
+
+        <div class="form-control">
+          <input type="checkbox" name="student-interest" id="interest-4" value="Java">
+          <label for="interest-4">Java</label>
+        </div>
+
+        <div class="form-control">
+          <input type="checkbox" name="student-interest" id="interest-5" value="Python">
+          <label for="interest-5">Python</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- <button type="submit">Submit</button> -->
+    <input type="submit" value="Submit">
+  </form>
+
+  <div id="students-list"></div>
+
+  <script src="task.js"></script>
+</body>
+</html>
