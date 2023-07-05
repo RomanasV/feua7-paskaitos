@@ -9,10 +9,49 @@ function itKnowledgeHandler() {
   })
 }
 
-function init() {
-  itKnowledgeHandler();
+function formLocalStorage(form) {
+  const namesList = ['person-name', 'person-surname', 'person-age', 'person-phone', 'person-email', 'person-it-knowledge', 'student-group', 'student-interest'];
 
+  namesList.forEach(elementName => {
+    const localStorageValue = JSON.parse(localStorage.getItem(elementName));
+
+    if (localStorageValue) {
+      if (Array.isArray(localStorageValue)) {
+        localStorageValue.forEach(value => {
+          form.querySelector(`[value="${value}"]`).checked = true;
+        })
+      } else {
+        const inputElement = form[elementName];
+        inputElement.value = localStorageValue;
+      }
+    }
+  })
+
+  form.addEventListener('input', (event) => {
+    const name = event.target.name;
+
+    if (event.target.type === 'checkbox') {
+      const interestInputs = form.querySelectorAll(`[name="${name}"]:checked`);
+
+      const interestsValue = [];
+
+      interestInputs.forEach(interest => {
+        interestsValue.push(interest.value);
+      })
+
+      localStorage.setItem(name, JSON.stringify(interestsValue));
+    } else {
+      const value = event.target.value;
+      localStorage.setItem(name, JSON.stringify(value));
+    }
+  })
+}
+
+function init() {
   const studentForm = document.querySelector('#student-form');
+  
+  itKnowledgeHandler();
+  formLocalStorage(studentForm);
 
   studentForm.addEventListener('submit', (event) => {
     event.preventDefault();
