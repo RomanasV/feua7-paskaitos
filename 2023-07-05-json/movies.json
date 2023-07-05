@@ -1,0 +1,26 @@
+[
+  {
+    "title": "The Shawshank Redemption",
+    "review": {
+      "count": 2700000,
+      "ranking": 9.3
+    },
+    "releaseYear": 1994,
+    "genres": ["Drama"],
+    "description": "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",
+    "directors": ["Frank Darabont"],
+    "stars": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"]
+  },
+  {
+    "title": "The Godfather",
+    "review": {
+      "count": 1900000,
+      "ranking": 9.2
+    },
+    "releaseYear": 1972,
+    "genres": ["Drama", "Crime"],
+    "description": "The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.",
+    "directors": ["Francis Ford Coppola"],
+    "stars": ["Marlon Brando", "Al Pacino", "James Caan"]
+  }
+]
