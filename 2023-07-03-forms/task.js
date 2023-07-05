@@ -49,6 +49,76 @@ function formLocalStorage(form) {
 
 function init() {
   const studentForm = document.querySelector('#student-form');
+  const localStorageStudents = JSON.parse(localStorage.getItem('students-data'));
+
+  if (localStorageStudents) {
+    localStorageStudents.forEach(student => {
+      const nameValue = student.nameValue;
+      const surnameValue = student.surnameValue;
+      const ageValue = student.ageValue;
+      const phoneValue = student.phoneValue;
+      const emailValue = student.emailValue;
+      const itKnowledgeValue = student.itKnowledgeValue;
+      const groupValue = student.groupValue;
+      const interestsValue = student.interestsValue;
+
+      const studentsList = document.querySelector('#students-list');
+
+      const studentItem = document.createElement('div');
+      studentItem.classList.add('student-item');
+
+      const studentNameElement = document.createElement('h2');
+      studentNameElement.textContent = `${nameValue} ${surnameValue}`;
+
+      const studentInfoList = document.createElement('ul');
+
+      const studentAgeElement = document.createElement('li');
+      studentAgeElement.textContent = `Age: ${ageValue}`;
+
+      const studentPhoneElement = document.createElement('li');
+      studentPhoneElement.textContent = `Phone: ****`;
+
+      const studentEmailElement = document.createElement('li');
+      studentEmailElement.textContent = `Email: ****`;
+
+      const studentITKnowledgeElement = document.createElement('li');
+      studentITKnowledgeElement.textContent = `IT Knowledge: ${itKnowledgeValue}`;
+
+      const studentGroupElement = document.createElement('li');
+      studentGroupElement.textContent = `Group: ${groupValue}`;
+      
+      studentInfoList.append(studentAgeElement, studentPhoneElement, studentEmailElement, studentITKnowledgeElement, studentGroupElement);
+
+      if (interestsValue.length > 0) {
+        const studentInterestElement = document.createElement('li');
+        studentInterestElement.textContent = `Interests: ${interestsValue.join(', ')}`;
+        
+        studentInfoList.append(studentInterestElement);
+      }
+
+      const privateInfoButton = document.createElement('button');
+      privateInfoButton.textContent = 'Show Private Info';
+
+      let privateInfoHidden = true;
+
+      privateInfoButton.addEventListener('click', () => {
+        privateInfoHidden = !privateInfoHidden;
+
+        if (privateInfoHidden) {
+          studentPhoneElement.textContent = `Phone: ****`;
+          studentEmailElement.textContent = `Email: ****`;
+          privateInfoButton.textContent = 'Show Private Info';
+        } else {
+          studentPhoneElement.textContent = `Phone: ${phoneValue}`;
+          studentEmailElement.textContent = `Email: ${emailValue}`;
+          privateInfoButton.textContent = 'Hide Private Info';
+        }
+      })
+
+      studentItem.append(studentNameElement, studentInfoList, privateInfoButton);
+      studentsList.append(studentItem);
+    })
+  }
   
   itKnowledgeHandler();
   formLocalStorage(studentForm);
@@ -79,6 +149,17 @@ function init() {
     interestInputs.forEach(interest => {
       interestsValue.push(interest.value);
     })
+
+    const studentData = {
+      nameValue,
+      surnameValue,
+      ageValue,
+      phoneValue,
+      emailValue,
+      itKnowledgeValue,
+      groupValue,
+      interestsValue
+    };
 
     const studentsList = document.querySelector('#students-list');
 
@@ -135,6 +216,14 @@ function init() {
 
     studentItem.append(studentNameElement, studentInfoList, privateInfoButton);
     studentsList.prepend(studentItem);
+    
+    if (localStorageStudents) {
+      localStorageStudents.unshift(studentData);
+      localStorage.setItem('students-data', JSON.stringify(localStorageStudents));
+    } else {
+      const studentsArr = [studentData];
+      localStorage.setItem('students-data', JSON.stringify(studentsArr));
+    }
   })
 }
 
